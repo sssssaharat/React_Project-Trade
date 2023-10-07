@@ -10,8 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.0.18",
+    "@splinetool/react-spline": "^2.2.6",
+    "@splinetool/runtime": "^0.9.470",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.11.0",
+    "react-text-gradients": "^1.0.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
@@ -21,6 +27,7 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
+    "tailwindcss": "^3.3.3",
     "vite": "^4.4.5"
   }
 }
