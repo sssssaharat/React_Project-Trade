@@ -13,12 +13,16 @@ import {
   IconButton
 } from '@material-tailwind/react'
 
-function Homepage () {
+function Home () {
+  const clickHandler = to => {
+    console.log(to)
+  }
+
   const products = [
     {
       id: 1,
       name: 'ICT',
-      href: '#',
+      path: '/ict',
       logo: 'src/assets/headerbg.PNG',
       aptitude: '⭐️⭐️⭐️⭐️⭐️',
       sub: 'ICT หรือ ชื่อเต็มคือ Inner Circle Trader เป็นแนวคิดการเทรดที่เผยแพร่ความคิดเกี่ยวกับ Smart Money Concept หรือ SMC ซึ่งเป็นที่รู้จักในบรรดาเทรดเดอร์ในประเทศไทยอย่างกว้างขวาง มีการนำแนวคิดไปใช้จำนวนมาก'
@@ -26,7 +30,7 @@ function Homepage () {
     {
       id: 2,
       name: 'Elliott Wave',
-      href: '#',
+      path: '/elliottwave',
       logo: 'src/assets/headerbg.PNG',
       aptitude: '⭐️⭐️⭐️⭐️',
       sub: 'ทฤษฎีที่อธิบายถึงการขึ้นลงของราคาสินทรัพย์ ที่เกิดขึ้นจากพฤติกรรมการซื้อขายของคนหมู่มากที่มีทั้งอารมณ์และหลักการทางจิตวิทยาเข้ามาเกี่ยวข้องกับการตัดสินใจของนักลงทุนในตลาด จนได้กราฟที่มีลักษณะเป็นคลื่นประกอบกันเป็นวัฏจักรของราคา'
@@ -34,7 +38,7 @@ function Homepage () {
     {
       id: 3,
       name: 'Harmonic Pattern',
-      href: '#',
+      path: '/harmonicpattern',
       logo: 'src/assets/headerbg.PNG',
       aptitude: '⭐️⭐️',
       sub: 'เป็นหนึ่งในรูปแบบกราฟเทรดที่มีความซับซ้อนเพิ่มมากขึ้น โดยอาศัยระดับ Fibonacci และพฤติกรรมราคาที่มีความเชื่อมโยงรูปแบบเรขาคณิตเข้ามาเกี่ยวข้อง เราเรียกรูปแบบนี้ว่า harmonic pattern ตามชื่อของ Harold McKinley Gartley ผู้ที่คิดค้นทฤษฎีนี้ขึ้นมาครั้งแรก'
@@ -42,17 +46,15 @@ function Homepage () {
     {
       id: 4,
       name: 'PriceAction',
-      href: '#',
+      path: '/priceaction',
       logo: 'src/assets/headerbg.PNG',
       aptitude: '⭐️⭐️',
       sub: 'สิ่งที่ราคาได้กระทำเป็นการพยายามแปลความหมายและตีความสถานการณ์ของตลาดทางการเงิน ผ่านการพิจารณารูปแบบราคา หรือ "Pattern" ที่สามารถมองเห็นได้ด้วยตาเปล่าผ่านกราฟราคา จึงมักนิยมเรียกลักษณะการวิเคราะห์ดังกล่าวว่า "วิเคราะห์กราฟเปล่า"'
     }
-
-    // More products...
   ]
 
   return (
-    <div className='bg-while'>
+    <div className='bg-black'>
       {/* Tag header */}
       <header className='absolute inset-x-0 top-0 z-50'>
         <nav
@@ -90,7 +92,7 @@ function Homepage () {
           {/* Img headerBG  */}
           <div className='grid items-center justify-center mx-9'>
             <Spline
-              className='object-cover object-center'
+              className='object-cover object-center '
               scene='https://prod.spline.design/rGFxfdsWETg4oAT1/scene.splinecode'
             />
           </div>
@@ -108,11 +110,11 @@ function Homepage () {
         </h2>
         <div className='mt-24 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8'>
           {products.map(product => (
-            <Card key={product.id} className='group relative'>
+            <Card key={product.id} className='group relative h-full w-full'>
               <CardHeader className='aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-400 lg:aspect-none  lg:h-80 w-38'>
                 <img
                   src={product.logo}
-                  className='h-full w-full object-cover'
+                  className='h-full w-full object-cover backdrop-blur bg-white/50'
                 />
               </CardHeader>
               <CardBody>
@@ -133,7 +135,11 @@ function Homepage () {
                 </Typography>
               </CardBody>
               <CardFooter className='pt-0'>
-                <Button variant='text' className='flex items-center gap-2'>
+                <Button
+                  onClick={product.path}
+                  variant='text'
+                  className='flex items-center gap-2'
+                >
                   Learn More
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
@@ -158,4 +164,8 @@ function Homepage () {
     </div>
   )
 }
-export default Homepage
+export default Home
+
+
+
+;<Link to={`/products/${product.id}`}>{product.to}</Link>
