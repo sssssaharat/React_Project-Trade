@@ -258,12 +258,12 @@ function Home () {
             {products.map(product => (
               <Card
                 key={product.id}
-                className='group relative h-full w-full bg-clip-border bg-neutral-950'
+                className='group relative h-full w-full bg-gray-dark shadow-2xl shadow-gray-500/50 '
               >
-                <CardHeader className='relative mx-4 mt-4 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40'>
+                <CardHeader className='relative mx-4 mt-4 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border  shadow-gray-950'>
                   <img
                     src={product.logo}
-                    className='h-full w-full object-cover item-center'
+                    className='h-full w-full object-cover group-hover:opacity-75 item-center'
                   />
                 </CardHeader>
                 <CardBody>
@@ -284,7 +284,7 @@ function Home () {
                 </CardBody>
                 <CardFooter className='pt-0'>
                   <Link to={product.action}>
-                    <Button variant='text' color='white' className='text-neutral-400 flex items-center gap-2'>
+                    <Button  className='text-neutral-900 bg-white rounded-full hover:bg-gray-300 flex items-center gap-2'>
                       Learn More
                       <svg
                         xmlns='http://www.w3.org/2000/svg'
