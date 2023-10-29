@@ -252,18 +252,18 @@ function Home () {
           <h2 className='my-4 text-lg text-center font-bold tracking-tight text-slate-50'>
             Check out most 🔥 courses in the market
           </h2>
-          <div className='mt-24 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8'>
+          <div className=' mt-24 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8'>
             {/* Card */}
 
             {products.map(product => (
               <Card
                 key={product.id}
-                className='group relative h-full w-full bg-gray-dark shadow-2xl shadow-gray-500/50 '
+                className=' group relative h-full w-full bg-zinc-950/40 ring-1 ring-white/10 hover:ring-white/20 hover:shadow-xl hover:shadow-zinc-950'
               >
                 <CardHeader className='relative mx-4 mt-4 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border  shadow-gray-950'>
                   <img
                     src={product.logo}
-                    className='h-full w-full object-cover group-hover:opacity-75 item-center'
+                    className='h-full w-full object-cover item-center'
                   />
                 </CardHeader>
                 <CardBody>
@@ -277,14 +277,14 @@ function Home () {
                   </div>
                   <Typography
                     variant='small'
-                    className='text-neutral-400 font-normal opacity-75'
+                    className='text-neutral-100 font-normal opacity-75'
                   >
                     {product.sub}
                   </Typography>
                 </CardBody>
                 <CardFooter className='pt-0'>
                   <Link to={product.action}>
-                    <Button  className='text-neutral-900 bg-white rounded-full hover:bg-gray-300 flex items-center gap-2'>
+                    <Button  className='text-neutral-100 bg-tranparente rounded-full ring-1 ring-white/10 hover:ring-white/30 flex items-center gap-2'>
                       Learn More
                       <svg
                         xmlns='http://www.w3.org/2000/svg'
