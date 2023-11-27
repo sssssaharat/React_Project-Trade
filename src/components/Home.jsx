@@ -58,17 +58,17 @@ function Home () {
       sub: 'สิ่งที่ราคาได้กระทำเป็นการพยายามแปลความหมายและตีความสถานการณ์ของตลาดทางการเงิน ผ่านการพิจารณารูปแบบราคา หรือ "Pattern" ที่สามารถมองเห็นได้ด้วยตาเปล่าผ่านกราฟราคา จึงมักนิยมเรียกลักษณะการวิเคราะห์ดังกล่าวว่า "วิเคราะห์กราฟเปล่า"'
     }
   ]
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const navigation = [
-    { id: 1, name: 'ICT', action: '/ict' },
-    { id: 2, name: 'Elliott Wave', action: '/elliottwave' },
-    { id: 3, name: 'Harmonic Pattern', action: '/harmonicpattern' },
-    { id: 4, name: 'PriceAction', action: '/priceaction' }
-  ]
+  // const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  // const navigation = [
+  //   { id: 1, name: 'ICT', action: '/ict' },
+  //   { id: 2, name: 'Elliott Wave', action: '/elliottwave' },
+  //   { id: 3, name: 'Harmonic Pattern', action: '/harmonicpattern' },
+  //   { id: 4, name: 'PriceAction', action: '/priceaction' }
+  // ]
 
   return (
-    <div className='bg-black'>
-      <header className='absolute inset-x-0 top-0 z-50'>
+    <div className=''>
+      {/* <header className='absolute inset-x-0 top-0 z-50'>
         <nav
           className='flex items-center justify-between p-6 lg:px-8'
           aria-label='Global'
@@ -95,12 +95,7 @@ function Home () {
           </div>
           <div className='hidden lg:flex lg:gap-x-12'>
             {navigation.map(item => (
-              <Link
-                key={item.id}
-                to={item.action}
-                // variant='text'
-                // color='while'
-              >
+              <Link key={item.id} to={item.action}>
                 <Button
                   variant='text'
                   className='rounded-full text-neutral-500 hover:text-gray-100 '
@@ -110,7 +105,7 @@ function Home () {
               </Link>
             ))}
           </div>
-          {/* themed */}
+
           <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
             <button class='items-center text-while hover:text-blue-600 font-medium dark:text-gray-400 dark:hover:text-gray-500'>
               <svg
@@ -137,11 +132,7 @@ function Home () {
               </svg>
             </button>
           </div>
-          {/* <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
-            
-          </div> */}
         </nav>
-        {/* Endnav */}
 
         <Dialog
           as='div'
@@ -201,7 +192,7 @@ function Home () {
             </div>
           </Dialog.Panel>
         </Dialog>
-      </header>
+      </header> */}
 
       <div className=' relative isolate px-6 pt-14 lg:px-8 '>
         <Card className='my-6 backdrop-blur-sm bg-gradient-to-r from-stone-950 to-black  rounded-3xl '>
@@ -210,15 +201,15 @@ function Home () {
             aria-hidden='true'
           ></div>
           <div className='relative isolate px-6 pt-14 lg:px-8 '>
-            <div className='items-center justify-beetween grid gap-x-12 gap-y-12 sm:gap-y-16 sm:grid-cols-2 xl:py-20 md:py-20 sm:py-6 py-12'>
+            <div className='items-center justify-beetween grid gap-x-12 gap-y-12 sm:gap-y-16 lg:grid-cols-2 xl:py-20 md:py-20 sm:py-6 py-12'>
               {/* Text inspire  */}
               <div className='text-center'>
-                <h1 className='mx-6 text-9xl font-bold tracking-tight'>
+                <h1 className='mx-6 text-6xl lg:text-9xl font-bold tracking-tight'>
                   <LinearGradient gradient={['to left', '#17acff ,#ff68f0']}>
                     Trust in Bias
                   </LinearGradient>
                 </h1>
-                <p className='mx-20 mt-6 text-lg leading-8 text-zinc-300  '>
+                <p className='mx-0 mt-6 text-lg leading-8 text-zinc-300  '>
                   Knowledge is worthless when you can't control your emotions
                   but consciousness can be deadly when practiced well.
                 </p>
@@ -243,13 +234,13 @@ function Home () {
           </div>
         </Card>
         {/* Our Trending Courses */}
-        <div className='mx-auto max-w-2xl px-16 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8'>
+        <div className='mx-auto max-w-2xl py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8'>
           <h1 className='text-7xl text-center font-bold tracking-tight animate-pulse '>
             <LinearGradient gradient={['to left', '#f3696e ,#f8a902']}>
               Our Trending Courses
             </LinearGradient>
           </h1>
-          <h2 className='my-4 text-lg text-center font-bold tracking-tight text-slate-50'>
+          <h2 className='my-4 text-sm sm:text-sm text-center font-bold tracking-tight text-slate-50'>
             Check out most 🔥 courses in the market
           </h2>
           <div className=' mt-24 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8'>
@@ -284,7 +275,7 @@ function Home () {
                 </CardBody>
                 <CardFooter className='pt-0'>
                   <Link to={product.action}>
-                    <Button  className='text-neutral-100 bg-tranparente rounded-full ring-1 ring-white/10 hover:ring-white/30 flex items-center gap-2'>
+                    <Button className='text-neutral-100 bg-tranparente rounded-full ring-1 ring-white/10 hover:ring-white/30 flex items-center gap-2'>
                       Learn More
                       <svg
                         xmlns='http://www.w3.org/2000/svg'
