@@ -136,7 +136,7 @@ const BounceCard = ({ className, children }) => {
   return (
     <motion.div
       whileHover={{ scale: 0.95, rotate: '-1deg' }}
-      className={`group relative min-h-[300px] cursor-pointer overflow-hidden rounded-3xl p-1 bg-neutral-900/90 ring-1 ring-white/10 hover:ring-white/40 hover:shadow-xl hover:shadow-zinc-900 ${className}`}
+      className={`group relative min-h-[300px] cursor-pointer overflow-hidden rounded-3xl p-1 bg-neutral-900/90 ring-1 ring-white/10 hover:ring-white/40 hover:shadow-xl hover:shadow-orange-950 ${className}`}
     >
       {children}
     </motion.div>
@@ -151,10 +151,37 @@ const CardTitle = ({ children }) => {
   )
 }
 
+const liquidity = [
+  {
+    id: 1,
+    img: 'src/assets/ICT/OldLow_OldHigh.png'
+  },
+  {
+    id: 2,
+    img: 'src/assets/ICT/RelativeEqualLows:High.png'
+  },
+  {
+    id: 3,
+    img: 'src/assets/ICT/Demand:Suppy.png'
+  },
+  {
+    id: 4,
+    img: 'src/assets/ICT/Trendline Liquidity.png'
+  },
+  {
+    id: 5,
+    img: 'src/assets/ICT/Session High:Low.png'
+  },
+  {
+    id: 6,
+    img: 'src/assets/ICT/Swing Structure .png'
+  }
+]
+
 function ICT () {
   return (
     <div className='bg-black'>
-      <section className='header '>
+      <section className='header'>
         <h1 className='text-center pt-7 text-9xl font-bold tracking-tight'>
           <LinearGradient gradient={['to left', '#deb8f5 ,#5b6cf9']}>
             ICT
@@ -315,12 +342,11 @@ function ICT () {
           </div>
         </div>
       </section>
-
       <section className='price_delivery'>
         <div className='mx-auto max-w-7xl px-4 py-12 text-slate-800 '>
-          <div className='mb-8 flex flex-col items-start justify-center gap-4 md:flex-row md:items-end md:px-8'>
-            <h2 className='text-4xl font-extrabold tracking-tight sm:text-7xl'>
-              <LinearGradient gradient={['to left', '#dd83ad ,#7a8fd3']}>
+          <div className='mb-14 flex flex-col  items-center justify-center gap-4 md:flex-row md:items-center md:px-8'>
+            <h2 className='text-5xl font-extrabold tracking-tight sm:text-7xl'>
+              <LinearGradient gradient={['to left', '#45cde9 ,#7277f1']}>
                 PRICE DELIVERY
               </LinearGradient>
             </h2>
@@ -352,19 +378,19 @@ function ICT () {
                 </BounceCard>
                 <BounceCard className='col-span-12 md:col-span-8 '>
                   <img
-                    className='rounded-3xl h-full w-full object-cover item-center'
+                    className=' rounded-3xl h-full w-full object-cover item-center'
                     src={post.img}
                   />
                 </BounceCard>
               </div>
             ) : (
               <div className='mb-4 grid grid-cols-12 gap-4'>
-                <BounceCard className='col-span-12 md:col-span-8 '>
+                <div className='col-span-12 md:col-span-8'>
                   <img
-                    className=' rounded-3xl h-full w-full object-cover item-center'
+                    className='rounded-3xl p-1 bg-neutral-950/90 ring-1 ring-white/10 hover:ring-white/20 hover:shadow-3xl hover:shadow-zinc-900 h-full w-full object-cover item-center'
                     src={post.img}
                   />
-                </BounceCard>
+                </div>
 
                 <BounceCard className='col-span-12 md:col-span-4'>
                   <CardTitle>
@@ -391,6 +417,33 @@ function ICT () {
               </div>
             )
           )}
+        </div>
+      </section>
+
+      <section className='liquidity '>
+        <div className='mx-auto max-w-7xl px-4 py-12'>
+          <div className='mx-auto max-w-3xl text-center mb-12'>
+            <h2 className='text-4xl font-extrabold tracking-tight sm:text-6xl'>
+              <LinearGradient gradient={['to left', '#45cde9 ,#7277f1']}>
+                TYPES OF LIQUIDITY
+              </LinearGradient>
+            </h2>
+            <p className='mt-6 mx-6 text-md font-bold text-center leading-8 indent-8 text-zinc-400 lg:mx-auto'>
+              Liquidity คือ Pattern ต่างๆที่รายใหญ่จงใจจะทำการทำราคาให้ไปกิน SL
+              เราจะเรียกจุดนั้นว่า Stop hunt
+              แล้วราคาจึงค่อยไปต่อเพราะรายใหญ่เก็บของครบแล้ว
+            </p>
+          </div>
+
+          <Carousel transition={{ duration: 2 }} className='rounded-3xl'>
+            {liquidity.map(lq => (
+              <img
+                key={lq}
+                className='h-full w-full object-cover'
+                src={lq.img}
+              />
+            ))}
+          </Carousel>
         </div>
       </section>
     </div>
