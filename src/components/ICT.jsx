@@ -22,7 +22,7 @@ import {
   CardBody,
   CardFooter
 } from '@material-tailwind/react'
-import { Carousel, Typography, Button } from '@material-tailwind/react'
+import { Carousel } from '@material-tailwind/react'
 import { motion } from 'framer-motion'
 
 const IOF = [
@@ -132,25 +132,6 @@ const pricedelivery = [
     icon: ServerIcon
   }
 ]
-const BounceCard = ({ className, children }) => {
-  return (
-    <motion.div
-      whileHover={{ scale: 0.95, rotate: '-1deg' }}
-      className={`group relative min-h-[300px] cursor-pointer overflow-hidden rounded-3xl p-1 bg-neutral-900/90 ring-1 ring-white/10 hover:ring-white/40 hover:shadow-xl hover:shadow-orange-950 ${className}`}
-    >
-      {children}
-    </motion.div>
-  )
-}
-
-const CardTitle = ({ children }) => {
-  return (
-    <h3 className='mx-auto mt-4 text-center  sm:text-md text-3xl font-semibold'>
-      {children}
-    </h3>
-  )
-}
-
 const liquidity = [
   {
     id: 1,
@@ -177,6 +158,24 @@ const liquidity = [
     img: 'src/assets/ICT/Swing Structure .png'
   }
 ]
+const BounceCard = ({ className, children }) => {
+  return (
+    <motion.div
+      whileHover={{ scale: 0.95, rotate: '-1deg' }}
+      className={`group relative min-h-[300px] cursor-pointer overflow-hidden rounded-3xl p-1 bg-neutral-950/90 ring-1 ring-white/20 hover:ring-white/40 hover:shadow-xl hover:shadow-orange-950 ${className}`}
+    >
+      {children}
+    </motion.div>
+  )
+}
+
+const CardTitle = ({ children }) => {
+  return (
+    <h3 className='mx-auto mt-4 text-center  sm:text-md text-3xl font-semibold'>
+      {children}
+    </h3>
+  )
+}
 
 function ICT () {
   return (
@@ -270,10 +269,8 @@ function ICT () {
         <div className='bg-black py-24 sm:py-32'>
           <div className='mx-auto max-w-7xl px-6 lg:px-8 text-center'>
             <div className='mx-auto max-w-5xl text-center'>
-              <h2 className='text-5xl font-extrabold tracking-tight text-gray-900 sm:text-7xl'>
-                <LinearGradient gradient={['to left', '#dd83ad ,#7a8fd3']}>
-                  สิ่งที่ตลาดทํานั่น
-                </LinearGradient>
+              <h2 className='text-5xl font-extrabold text-white sm:text-7xl'>
+                สิ่งที่ตลาดทํานั้น
               </h2>
               <h2 className='text-4xl sm:text-7xl pt-5 font-extrabold tracking-tight text-gray-900'>
                 <LinearGradient gradient={['to left', '#45cde9 ,#7277f1']}>
@@ -419,7 +416,6 @@ function ICT () {
           )}
         </div>
       </section>
-
       <section className='liquidity '>
         <div className='mx-auto max-w-7xl px-4 py-12'>
           <div className='mx-auto max-w-3xl text-center mb-12'>
@@ -446,7 +442,90 @@ function ICT () {
           </Carousel>
         </div>
       </section>
+      <section className='orderblock'>
+        <div className='mx-auto max-w-7xl  py-12'>
+          <div className='grid grid-cols-1 gap-x-6 gap-y-10 lg:grid-cols-3 xl:gap-x-8 divide-x-2 divide-slate-400/25 '>
+            <div class='col-span-2 text-white mx-6 pl-8'>
+              <div className='text-xs leading-5 text-zinc-400'>
+                ICT Orderblock
+              </div>
+              <div className='text-5xl my-6 font-extrabold tracking-wide'>
+                <LinearGradient gradient={['to left', '#ffcaa6 ,#f86594']}>
+                  ไม่ใช่ Supply & Demand
+                </LinearGradient>
+              </div>
+
+              <div className=' grid grid-cols-1 lg:grid-cols-2  '>
+                <div className='text-5xl font-extrabold'>
+                  ไม่ใช่แค่แท่งเทียน
+                </div>
+
+                <div className='text-sm text-zinc-400 sm:md:lg:ml-12 mt-6 sm:md:lg:mt-0 grid content-center '>
+                  Bullish หรือ Bearishสุดท้ายก่อน The Market Structure
+                  Shift(หรือที่ SMC เรียกว่า Change of Character ChoCh)...
+                </div>
+              </div>
+            </div>
+            <div className='text-white mx-12 p-12 py-2'>
+              <div className='text-3xl  tracking-wide '>
+                <LinearGradient gradient={['to right', '#ffcaa6 ,#f86594']}>
+                  OrderBlock sell before buy
+                </LinearGradient>
+              </div>
+              <div className='text-3xl tracking-wide'>หรือ buy before sell</div>
+              <div className='mt-3 text-sm  leading-5 text-zinc-400 whitespace-pre-line '>
+                แท่ง Bearish แท่งสุดท้ายก่อนการ Break structure ขาขึ้น หรือแท่ง
+                Bullish แท่งสุดท้ายก่อนการ Break structure ขาลง
+              </div>
+            </div>
+          </div>
+          <div className='divide-x-2 divide-slate-400/25 grid grid-cols-1 mx-6 gap-x-6 gap-y-10 lg:grid-cols-3 xl:gap-x-8 py-24 '>
+            <div className='text-white py-2 text-center'>
+              <div className='text-xs leading-5 text-zinc-400 my-4'>
+                จะต้องมี 2 สิ่งนี้ประกอบด้วยเสมอ
+              </div>
+              <div className='text-3xl mb-3'>
+                <LinearGradient gradient={['to left', '#f9f5e0 ,#f5895c']}>
+                  ถ้าขาดอย่างใด
+                </LinearGradient>
+              </div>
+              <div className='text-3xl mb-3'>
+                <LinearGradient gradient={['to left', '#fdf1cb ,#ee609a']}>
+                  อย่างหนึ่งก็ไม่มี
+                </LinearGradient>
+              </div>
+              <div className='leading-5 whitespace-pre-line'>Orderblock !</div>
+            </div>
+            <div class='col-span-2 text-white mx-8 p-12 py-2 '>
+              <div className='text-3xl my-3 font-extrabold tracking-wide '>
+                <LinearGradient gradient={['to left', '#727a9a ,#d8dbe9']}>
+                  1. จะต้องมี Liquidity Grab
+                </LinearGradient>
+              </div>
+              <div className='text-sm  leading-5 text-zinc-400 whitespace-pre-line '>
+                ที่ Swing High, Swing Low, Old High, Old Low, High of Day, Low
+                of Day, PDH, PDL, Clean Highs (EQH), Clean Lows (EQL) ซึ่งก็คือ
+                ต้องเกิด Stop Raid (Fake Breakout, Stop Hunt, Stop Run)
+              </div>
+              <div className='text-3xl my-3 font-extrabold tracking-wide'>
+                <LinearGradient gradient={['to left', '#727a9a ,#d8dbe9']}>
+                  2. จะต้องสร้าง FVG (Fair Value Gap)
+                </LinearGradient>
+              </div>
+              <div className='text-sm  leading-5 text-zinc-400 whitespace-pre-line'>
+                หลังจากเบรค Short term swing low ทำให้เกิด Market structure
+                shift แปลว่ามันจะต้องมี แท่ง Imbalance ถ้าไม่มี Displacement,
+                Imbalance และ Fair Value Gap ก็ไม่มี Orderblock!
+              </div>
+            </div>
+          </div>
+          <div>
+            <img src="src/assets/ICT/New Project.png" />
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
+
 export default ICT
