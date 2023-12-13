@@ -16,15 +16,8 @@ import {
   LockClosedIcon,
   ServerIcon
 } from '@heroicons/react/20/solid'
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter
-} from '@material-tailwind/react'
 import { Carousel } from '@material-tailwind/react'
 import { motion } from 'framer-motion'
-
 const IOF = [
   'Expansion (การแจกจ่าย)',
   'Retracement (การย่อตัว)',
@@ -161,8 +154,11 @@ const liquidity = [
 const BounceCard = ({ className, children }) => {
   return (
     <motion.div
-      whileHover={{ scale: 0.95, rotate: '-1deg' }}
-      className={`group relative min-h-[300px] cursor-pointer overflow-hidden rounded-3xl p-1 bg-neutral-950/90 ring-1 ring-white/20 hover:ring-white/40 hover:shadow-xl hover:shadow-orange-950 ${className}`}
+      whileHover={{
+        scale: 1.1,
+        transition: { duration: 0.7 }
+      }}
+      className={`group relative min-h-[300px] cursor-pointer overflow-hidden rounded-3xl p-1 bg-zinc-700/25 hover:ring-1 hover:ring-zinc-800 hover:shadow-xl hover:shadow-gray-950 ${className}`}
     >
       {children}
     </motion.div>
@@ -176,6 +172,169 @@ const CardTitle = ({ children }) => {
     </h3>
   )
 }
+
+const TerminologyAbbreviations = [
+  {
+    id: 1,
+    name: 'BSL',
+    fullname: 'buyside liquidity'
+  },
+  {
+    id: 2,
+    name: 'SSL',
+    fullname: 'sellside liquidity'
+  },
+  {
+    id: 3,
+    name: 'EQH',
+    fullname: 'equal highs'
+  },
+  {
+    id: 4,
+    name: 'EQL',
+    fullname: 'equal lows'
+  },
+  {
+    id: 5,
+    name: 'PDH',
+    fullname: 'previous day high'
+  },
+  {
+    id: 6,
+    name: 'PDL',
+    fullname: 'previous day low'
+  },
+  {
+    id: 7,
+    name: 'HTF',
+    fullname: 'high timeframe'
+  },
+  {
+    id: 8,
+    name: 'LTF',
+    fullname: 'low timeframe'
+  },
+  {
+    id: 9,
+    name: 'MSB',
+    fullname: 'market structure break'
+  },
+  {
+    id: 10,
+    name: 'STH',
+    fullname: 'short term high'
+  },
+  {
+    id: 11,
+    name: 'STL',
+    fullname: 'short term low'
+  },
+  {
+    id: 12,
+    name: 'ITH',
+    fullname: 'intermediate term high'
+  },
+  {
+    id: 13,
+    name: 'ITL',
+    fullname: 'intermediate term low'
+  },
+  {
+    id: 14,
+    name: 'LTH',
+    fullname: 'long term high'
+  },
+  {
+    id: 15,
+    name: 'LTL',
+    fullname: 'long term low'
+  },
+  {
+    id: 16,
+    name: 'IDM',
+    fullname: 'inducement'
+  },
+  {
+    id: 17,
+    name: 'FVG',
+    fullname: 'fair value gap'
+  },
+  {
+    id: 18,
+    name: 'OB',
+    fullname: 'order block'
+  },
+  {
+    id: 19,
+    name: 'BB',
+    fullname: 'breaker block'
+  },
+  {
+    id: 20,
+    name: 'SMT',
+    fullname: 'smart money technique'
+  },
+  {
+    id: 21,
+    name: 'OTE',
+    fullname: 'optimal trade entry'
+  },
+  {
+    id: 22,
+    name: 'PD',
+    fullname: 'premium discount'
+  },
+  {
+    id: 23,
+    name: 'BISI',
+    fullname: 'buyside imbalance sellside inefficiency'
+  },
+  {
+    id: 24,
+    name: 'SIBI',
+    fullname: 'sellside imbalance buyside inefficiency'
+  },
+  {
+    id: 25,
+    name: 'MMBM',
+    fullname: 'market maker buy model'
+  },
+  {
+    id: 26,
+    name: 'MMSM',
+    fullname: 'market maker sell model'
+  },
+  {
+    id: 27,
+    name: 'IOF',
+    fullname: 'institutional order flow'
+  },
+  {
+    id: 28,
+    name: 'DOL',
+    fullname: 'draw on liquidity'
+  },
+  {
+    id: 29,
+    name: 'POI',
+    fullname: 'point of interest'
+  },
+  {
+    id: 30,
+    name: 'CE',
+    fullname: 'consequent encroachment'
+  },
+  {
+    id: 31,
+    name: 'PO3',
+    fullname: 'power of three'
+  },
+  {
+    id: 32,
+    name: 'KZ',
+    fullname: 'killzone'
+  }
+]
 
 function ICT () {
   return (
@@ -342,18 +501,21 @@ function ICT () {
       <section className='price_delivery'>
         <div className='mx-auto max-w-7xl px-4 py-12 text-slate-800 '>
           <div className='mb-14 flex flex-col  items-center justify-center gap-4 md:flex-row md:items-center md:px-8'>
-            <h2 className='text-5xl font-extrabold tracking-tight sm:text-7xl'>
-              <LinearGradient gradient={['to left', '#45cde9 ,#7277f1']}>
-                PRICE DELIVERY
+            <h2 className='text-7xl font-medium tracking-wide  text-center'>
+              <div className='text-sm py-2 text-gray-400 tracking-tight leading-8 '>
+                กระบวนการส่งมอบราคา
+              </div>
+              <LinearGradient gradient={['to left', '#727a9a ,#d8dbe9']}>
+                Price Delivery
               </LinearGradient>
             </h2>
           </div>
           {pricedelivery.map(post =>
             post.id % 2 === 0 ? (
-              <div key={post} className='mb-4 grid grid-cols-12 gap-4'>
+              <div key={post} className='mb-24 grid grid-cols-12 gap-8'>
                 <BounceCard className='col-span-12 md:col-span-4'>
                   <CardTitle>
-                    <LinearGradient gradient={['to left', '#f28367 ,#ff5282']}>
+                    <LinearGradient gradient={['to left', '#727a9a ,#d8dbe9']}>
                       {post.title}
                     </LinearGradient>
                   </CardTitle>
@@ -373,25 +535,25 @@ function ICT () {
                     {post.meaning3}
                   </div>
                 </BounceCard>
-                <BounceCard className='col-span-12 md:col-span-8 '>
+                <div className='col-span-12 md:col-span-8 '>
                   <img
                     className=' rounded-3xl h-full w-full object-cover item-center'
                     src={post.img}
                   />
-                </BounceCard>
+                </div>
               </div>
             ) : (
-              <div className='mb-4 grid grid-cols-12 gap-4'>
+              <div className='mb-24 grid grid-cols-12 gap-8'>
                 <div className='col-span-12 md:col-span-8'>
                   <img
-                    className='rounded-3xl p-1 bg-neutral-950/90 ring-1 ring-white/10 hover:ring-white/20 hover:shadow-3xl hover:shadow-zinc-900 h-full w-full object-cover item-center'
+                    className='rounded-3xl p-1 h-full w-full object-cover item-center'
                     src={post.img}
                   />
                 </div>
 
                 <BounceCard className='col-span-12 md:col-span-4'>
                   <CardTitle>
-                    <LinearGradient gradient={['to left', '#f28367 ,#ff5282']}>
+                    <LinearGradient gradient={['to left', '#727a9a ,#d8dbe9']}>
                       {post.title}
                     </LinearGradient>
                   </CardTitle>
@@ -419,19 +581,22 @@ function ICT () {
       <section className='liquidity '>
         <div className='mx-auto max-w-7xl px-4 py-12'>
           <div className='mx-auto max-w-3xl text-center mb-12'>
-            <h2 className='text-4xl font-extrabold tracking-tight sm:text-6xl'>
-              <LinearGradient gradient={['to left', '#45cde9 ,#7277f1']}>
-                TYPES OF LIQUIDITY
+            <h2 className='text-7xl font-medium tracking-wide  text-center sm:text-6xl'>
+              <LinearGradient gradient={['to left', '#727a9a ,#d8dbe9']}>
+                Type of Liquidity
               </LinearGradient>
             </h2>
-            <p className='mt-6 mx-6 text-md font-bold text-center leading-8 indent-8 text-zinc-400 lg:mx-auto'>
+            <p className='mt-6 mx-6 text-md text-center leading-8 indent-8 text-zinc-400 lg:mx-auto'>
               Liquidity คือ Pattern ต่างๆที่รายใหญ่จงใจจะทำการทำราคาให้ไปกิน SL
               เราจะเรียกจุดนั้นว่า Stop hunt
               แล้วราคาจึงค่อยไปต่อเพราะรายใหญ่เก็บของครบแล้ว
             </p>
           </div>
 
-          <Carousel transition={{ duration: 2 }} className='rounded-3xl'>
+          <Carousel
+            transition={{ duration: 2 }}
+            className='rounded-3xl ring-1 ring-gray-600 border-b-4 border-gray-500 '
+          >
             {liquidity.map(lq => (
               <img
                 key={lq}
@@ -502,17 +667,17 @@ function ICT () {
                   1. จะต้องมี Liquidity Grab
                 </LinearGradient>
               </div>
-              <div className='text-sm  leading-5 text-zinc-400 whitespace-pre-line '>
+              <div className='text-sm ml-8 leading-5 text-zinc-400 whitespace-pre-line '>
                 ที่ Swing High, Swing Low, Old High, Old Low, High of Day, Low
                 of Day, PDH, PDL, Clean Highs (EQH), Clean Lows (EQL) ซึ่งก็คือ
                 ต้องเกิด Stop Raid (Fake Breakout, Stop Hunt, Stop Run)
               </div>
-              <div className='text-3xl my-3 font-extrabold tracking-wide'>
+              <div className='text-3xl  my-3 font-extrabold tracking-wide'>
                 <LinearGradient gradient={['to left', '#727a9a ,#d8dbe9']}>
                   2. จะต้องสร้าง FVG (Fair Value Gap)
                 </LinearGradient>
               </div>
-              <div className='text-sm  leading-5 text-zinc-400 whitespace-pre-line'>
+              <div className='text-sm  ml-8 leading-5 text-zinc-400 whitespace-pre-line'>
                 หลังจากเบรค Short term swing low ทำให้เกิด Market structure
                 shift แปลว่ามันจะต้องมี แท่ง Imbalance ถ้าไม่มี Displacement,
                 Imbalance และ Fair Value Gap ก็ไม่มี Orderblock!
@@ -520,9 +685,63 @@ function ICT () {
             </div>
           </div>
           <div>
-            <img src="src/assets/ICT/New Project.png" />
+            <img src='src/assets/ICT/New Project.png' />
           </div>
         </div>
+      </section>
+      <section className='FVG'>
+        <div className='mx-auto max-w-7xl px-4 py-12 text-center font-sans'>
+          <div className='text-5xl my-3 font-medium tracking-wide  text-center sm:text-7xl'>
+            <LinearGradient gradient={['to left', '#727a9a ,#d8dbe9']}>
+              Imbalance และ FVG
+            </LinearGradient>
+          </div>
+          <div className='mx-12 grid grid-cols-1 lg:grid-cols-3  gap-4 py-12 text-left items-center'>
+            <div className='text-md leading-5 text-zinc-400 whitespace-pre-line '>
+              <div>
+                Imbalance State แปลว่า มีผู้ซื้อ มากกว่า ผู้ขาย หรือ มีผู้ขาย
+                มากกว่าผู้ซื้อ
+              </div>
+              <div className='my-4'>
+                ยกตัวอย่าง เช่น มีผู้ซื้อ มากกว่า ผู้ขาย เนื่องจากอาจจะมี
+                คำสั่งซื้อเป็น Position size ขนาดใหญ่มากของ Market Makers
+                จึงได้เกิดแท่ง Bullish Imbalance ขึ้น
+              </div>
+              <div>
+                แต่เนื่องจากมันมีคำสั่งซื้อที่ใหญ่มาก มันจึงเกิด Unfilled orders
+                เกิดขึ้น หมายความว่า มันยังมี buy orders
+                ที่ยังไม่ได้จับคู่กันหลงเหลืออยู่
+              </div>
+            </div>
+            <div className='grid grid-rows-3 text-2xl text-center text-zinc-200 items-center '>
+              <div>เพราะฉะนั้นเวลาเกิด</div>
+              <div>Imbalance ก็จะต้องมีการกลับมา</div>
+              <div>Rebalance</div>
+            </div>
+            <div className='text-md leading-5 text-zinc-400 whitespace-pre-line'>
+              <div>
+                ดังนั้น เวลาที่ราคาเทรดกลับมาที่ FVG, Supply zone and Demand
+                zone หนือ Order Block ราคาจึงมีการกลับตัวและวิ่งออกจาก โซนต่างๆ
+                นี้
+              </div>
+
+              <div className='my-4'>
+                แล้วก็จะกลับมาที่โซนนี้อีก จนกว่าที่ Unfilled orders
+                จะจับคู่กันจนหมดไป อาจจะกลับมาครั้งเดียวแล้วจับคู่จนหมด
+                หรืออาจจะกลับมาหลายๆ ครั้ง หลักการเดียวกับ Supply zone and
+                Demand zone ครับ กลับมาครั้งแรกจะดีที่สุด เพราะมันเป็น Fresh
+                zone
+              </div>
+              <div>
+                เราไม่สามารถรู้ได้ว่ากลับมาครั้งแรกมันจะจับคู่ Unfilled orders
+                หมดในครั้งเดียวไหม หรืออาจจะต้องกลับมาอีก
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className='TerminologyAbbreviations'>
+
       </section>
     </div>
   )

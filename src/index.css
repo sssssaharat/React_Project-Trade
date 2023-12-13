@@ -10,3 +10,7 @@ html::-webkit-scrollbar{
 .display-none {
     @apply hidden;
 }
+
+body{
+font-family: 'SF Pro Display', sans-serif;
+}
