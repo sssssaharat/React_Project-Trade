@@ -394,7 +394,7 @@ function ICT () {
         <div className='mx-auto max-w-7xl bg-black mt-20'>
           <div className='mx-auto max-w-2xl text-center'>
             <h2 className='text-center text-6xl font-extrabold leading-7'>
-              <LinearGradient gradient={['to left', '#6fe3e1 ,#5b6cf9']}>
+              <LinearGradient gradient={['to left', '#727a9a ,#d8dbe9']}>
                 Kill Zone
               </LinearGradient>
             </h2>
@@ -428,9 +428,13 @@ function ICT () {
         <div className='bg-black py-24 sm:py-32'>
           <div className='mx-auto max-w-7xl px-6 lg:px-8 text-center'>
             <div className='mx-auto max-w-5xl text-center'>
+               
               <h2 className='text-5xl font-extrabold text-white sm:text-7xl'>
-                สิ่งที่ตลาดทํานั้น
+                <LinearGradient gradient={['to left',  '#727a9a ,#d8dbe9']}>
+                 สิ่งที่ตลาดทํานั้น
+                </LinearGradient>
               </h2>
+             
               <h2 className='text-4xl sm:text-7xl pt-5 font-extrabold tracking-tight text-gray-900'>
                 <LinearGradient gradient={['to left', '#45cde9 ,#7277f1']}>
                   คือสิ่งที่ อัลกอริธึมทํา
@@ -741,7 +745,25 @@ function ICT () {
         </div>
       </section>
       <section className='TerminologyAbbreviations'>
-
+        <div className='bg-zinc-700/25 py-24 sm:py-32'>
+          <div className='mx-auto px-6 lg:px-8'>
+            <dl className='grid grid-cols-3 gap-x-8 gap-y-14 text-center lg:grid-cols-8'>
+              {TerminologyAbbreviations.map(stat => (
+                <div
+                  key={stat.id}
+                  className='mx-auto flex max-w-7xl flex-col gap-y-4'
+                >
+                  <dt className=' leading-7 text-zinc-600 text-xs'>
+                    {stat.fullname}
+                  </dt>
+                  <dd className='order-first text-xs font-semibold tracking-tight text-zinc-200 sm:text-sm'>
+                    {stat.name}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </div>
       </section>
     </div>
   )
