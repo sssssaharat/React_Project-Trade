@@ -745,7 +745,7 @@ function ICT () {
         </div>
       </section>
       <section className='TerminologyAbbreviations'>
-        <div className='bg-zinc-700/25 py-24 sm:py-32'>
+        <div className='bg-zinc-700/25 py-8 sm:py-12'>
           <div className='mx-auto px-6 lg:px-8'>
             <dl className='grid grid-cols-3 gap-x-8 gap-y-14 text-center lg:grid-cols-8'>
               {TerminologyAbbreviations.map(stat => (
