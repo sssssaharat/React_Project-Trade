@@ -8,6 +8,46 @@ import {
   RiNumber5,
   RiNumber6
 } from 'react-icons/ri'
+import {
+  Tabs,
+  TabsHeader,
+  TabsBody,
+  Tab,
+  TabPanel
+} from '@material-tailwind/react'
+
+const datas = [
+  {
+    id: 1,
+    label: 'Irregular Flat',
+    value: 'irregularflat',
+    img: 'src/assets/Elliotwave/rule/IrregularFlat.png'
+  },
+  {
+    id: 2,
+    label: 'Irregular Failure Flat',
+    value: 'irregularfailureflat',
+    img: 'src/assets/Elliotwave/rule/IrregularFlat.png'
+  },
+  {
+    id: 3,
+    label: 'Running Flat',
+    value: 'runningflat',
+    img: 'src/assets/Elliotwave/rule/Running_Flat.png'
+  },
+  {
+    id: 4,
+    label: 'Flat Normal B',
+    value: 'flatnormalb',
+    img: 'src/assets/Elliotwave/rule/NormalB.png'
+  },
+  {
+    id: 5,
+    label: 'Zigzag',
+    value: 'zigzag',
+    img: 'src/assets/Elliotwave/rule/Zigzag.png'
+  }
+]
 
 const role = [
   {
@@ -63,20 +103,23 @@ function Elliottwave () {
 
       <section className='rule'>
         <div className='bg-black py-24 sm:py-32'>
-          <div className='mx-auto max-w-7xl px-6 lg:px-8'>
+          <div className='mx-auto  px-6 lg:px-8'>
             <div className=' text-center pb-12 text-7xl text-zinc-800 '>
-              <LinearGradient className='p-4' gradient={['to left', '#8399a2 ,#eef2f3']}>
+              <LinearGradient
+                className='p-4'
+                gradient={['to left', '#8399a2 ,#eef2f3']}
+              >
                 กฎ
               </LinearGradient>
-               ของคลื่น
+              ของคลื่น
             </div>
-            <dl className='grid grid-cols-2 py-12  gap-x-14 gap-y-16 text-center md:grid-cols-3 lg:grid-cols-3 rounded-3xl bg-zinc-950/40 ring-1 ring-white/10 hover:ring-white/20 hover:shadow-xl hover:shadow-zinc-950'>
+            <dl className='grid grid-cols-2 py-12 xl:divide-x divide-zinc-900 gap-y-12  text-center md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 rounded-3xl bg-zinc-950/40 ring-1 ring-white/10 hover:ring-white/20 hover:shadow-xl hover:shadow-zinc-950'>
               {role.map(roles => (
                 <div
                   key={roles.id}
-                  className='mx-3 flex max-w-xs flex-col gap-y-4'
+                  className='mx-3 flex max-w-xs flex-col  gap-y-6'
                 >
-                  <dt className='text-base leading-7 text-gray-400'>
+                  <dt className='text-base leading-7 text-gray-400 '>
                     <LinearGradient gradient={['to left', '#60696b ,#858e96']}>
                       {roles.name}
                     </LinearGradient>
@@ -88,6 +131,51 @@ function Elliottwave () {
               ))}
             </dl>
           </div>
+        </div>
+      </section>
+
+      <section className='detail'>
+        <div className='bg-black '>
+          <Tabs
+            key={datas}
+            value='Irregular Flat'
+            className='mx-auto max-w-7xl py-12'
+          >
+            <TabsHeader
+              className='text-white sm:text-lg text-xs bg-transparent bg-zinc-700/25 rounded-3xl flex items-center'
+              indicatorProps={{
+                className: 'bg-gray-600/10 shadow-3xl rounded-3xl '
+              }}
+            >
+              {datas.map(({ label, value }) => (
+                <Tab
+                  key={value}
+                  value={value}
+                  className=' py-4 mx-2 my-1 text-md font-semibold  tracking-wide '
+                >
+                  {label}
+                </Tab>
+              ))}
+            </TabsHeader>
+            <TabsBody
+              animate={{
+                initial: { y: 250 },
+                mount: { y: 0 },
+                unmount: { y: 250 }
+              }}
+            >
+              {datas.map(({ value, img }) => (
+                <TabPanel key={value} value={value}>
+                  <div className='border-gray-500 '>
+                    <img
+                      className='h-full w-full object-cover rounded-3xl ring-1 ring-gray-600'
+                      src={img}
+                    />
+                  </div>
+                </TabPanel>
+              ))}
+            </TabsBody>
+          </Tabs>
         </div>
       </section>
     </div>
