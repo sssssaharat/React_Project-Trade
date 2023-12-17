@@ -84,7 +84,7 @@ const role = [
 
 function Elliottwave () {
   return (
-    <div className=''>
+    <div className='bg-black'>
       <section className='header'>
         <h1 className='bg-black text-center py-24 text-9xl tracking-tight'>
           <LinearGradient gradient={['to left', '#deb8f5 ,#5b6cf9']}>
@@ -92,7 +92,6 @@ function Elliottwave () {
           </LinearGradient>
         </h1>
       </section>
-
       <section className='structure'>
         <div className='bg-black'>
           <div className='mx-auto max-w-7xl px-4 py-12 '>
@@ -100,7 +99,6 @@ function Elliottwave () {
           </div>
         </div>
       </section>
-
       <section className='rule'>
         <div className='bg-black py-24 sm:py-32'>
           <div className='mx-auto  px-6 lg:px-8'>
@@ -133,7 +131,6 @@ function Elliottwave () {
           </div>
         </div>
       </section>
-
       <section className='detail'>
         <div className='bg-black '>
           <Tabs
@@ -142,7 +139,7 @@ function Elliottwave () {
             className='mx-auto max-w-7xl py-12'
           >
             <TabsHeader
-              className='text-white sm:text-lg text-xs bg-transparent bg-zinc-700/25 rounded-3xl flex items-center'
+              className='text-white sm:text-lg mx-4 text-xs bg-transparent bg-zinc-700/25 rounded-3xl flex items-center'
               indicatorProps={{
                 className: 'bg-gray-600/10 shadow-3xl rounded-3xl '
               }}
@@ -176,6 +173,55 @@ function Elliottwave () {
               ))}
             </TabsBody>
           </Tabs>
+        </div>
+      </section>
+      <section className='trending impules '>
+        <div className='mx-auto max-w-7xl text-center py-24 '>
+          <h2 className='text-7xl font-medium tracking-wide  text-center sm:text-6xl '>
+            <LinearGradient gradient={['to left', '#727a9a ,#fff']}>
+              ใน trending impules <br></br>รูปแบบปกติ เราจะเจออะไร
+            </LinearGradient>
+          </h2>
+          <div className='grid grid-cols-1 gap-x-6 gap-y-10 lg:grid-cols-3 xl:gap-x-8 py-12'>
+            <div className='mx-6 text-md leading-8 text-zinc-400 py-12 rounded-3xl bg-gradient-to-l to-70% from-indigo-900 '>
+              <div className='text-7xl my-6 text-white'>Wave 1</div>
+              <div className='mx-3 py-2'>
+                market maker ทดสอบตลาด ดันราคาขึ้นมาสูง
+              </div>
+            </div>
+            <div className='mx-6 col-span-2 text-md leading-8 text-zinc-400 py-12 rounded-3xl bg-gradient-to-r to-70% from-indigo-900'>
+              <div class='mx-3 grid grid-cols-1 md:grid-cols-2 gap-4 items-center'>
+                <div class='text-7xl my-6 text-white'>Wave 2</div>
+                <div class='mx-3 py-2 '>
+                  รายย่อยยังไม่มั่นใจว่า ตลาดกลับเทรนจริงรึยัง <br></br>(
+                  ราคาเพิ่งลงมามาก )จึงมีการขายทำกำไร +
+                  คนที่ดอยมาขายทิ้งซึ่งการขายมักจะเริ่มด้วย market maker
+                  เป็นคนทุบเพื่อจุดชนวนการขาย
+                </div>
+              </div>
+            </div>
+            <div className='mx-6 col-span-2 text-md leading-8 text-zinc-400 py-12 rounded-3xl bg-gradient-to-l to-70% from-violet-950'>
+              <div class='mx-3 grid grid-cols-1 md:grid-cols-2 gap-4 items-center'>
+                <div class='mx-3 py-2'>
+                  ราคาจะลงมาก ( คลื่นปรับ 2 ) ซึ่ง market maker<br></br>
+                  จะมีหน้าที่รักษาราคา และ ดูแรงขายตรงนี้ให้ดูที่การ retrace
+                  หลับลงมา 50-61.8 ถือว่าดี ถ้าหลุด 78.6-88.6 ลงไป
+                  ถือว่าแรงขายมาก แต่ market maker ยังรับอยู่ และจะต้องไม่หลุด
+                  low ลงไป
+                </div>
+                <div class='row-span-3 text-7xl my-6 text-white'>Wave 3</div>
+              </div>
+            </div>
+            <div className='mx-6 text-md leading-8 text-zinc-400 py-12 rounded-3xl bg-gradient-to-r to-70% from-violet-950 '>
+              <div className='text-7xl my-6 text-white'>Wave 4</div>
+
+              <div>market maker ทดสอบตลาด ดันราคาขึ้นมาสูง</div>
+            </div>
+          </div>
+          <div className='mx-6 text-md col-span-3 leading-8 text-zinc-400 py-12 rounded-3xl bg-gradient-to-r from-violet-950/10 from-5% via-purple-950 via-50% to-violet-950/10  to-90%'>
+            <div className='text-7xl my-6 text-white'>Wave 5</div>
+            <div className='mx-3 py-2'>รายย่อยขาย เจ้าเก็บของ</div>
+          </div>
         </div>
       </section>
     </div>
