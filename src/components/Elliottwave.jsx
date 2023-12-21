@@ -15,6 +15,7 @@ import {
   Tab,
   TabPanel
 } from '@material-tailwind/react'
+import { CurrencyDollarIcon } from '@heroicons/react/24/solid'
 
 const datas = [
   {
@@ -82,6 +83,45 @@ const role = [
   }
 ]
 
+const moreDetail = [
+  {
+    id: 1,
+    name: 'สาเหตุให้ การเกิด 3 ขยาย ',
+    detail:
+      'ในรูปแบบมาตราฐานของ trending impulseเกิดเมื่อ wave2 ปรับลึก กินเวลานาน ทำไม ต้องกินเวลานาน/ปรับลึกด้วย?'
+  },
+  {
+    id: 2,
+    name: 'market maker ',
+    detail:
+      'จะเก็บของ ต้องใช้เวลาคับ จะมาหวดๆ เลยมันไม่ได้เมื่อความเชื่อมั่นยังไม่สูง เนื่องจากตลาดยังไม่มั่นใจว่า กลับเทรนแล้วหรือยัง ( DOW ยังไม่ยก low ) ราคามีแนวโน้มที่จะซึมลง ตามอาการการเก็บของของ market makerเมื่อเจ้าเก็บของได้ครบ (ปรับลึก ใช้เวลานานของ w2 ) ราคาจะมีการขึ้นอย่างรุนแรง ( ข่าวเริ่มเข้า ) เพื่อเดินทางสู่ wave3extension'
+  },
+  {
+    id: 3,
+    name: 'เมื่อคนเริ่มเห็นการขึ้น',
+    detail:
+      'มีอาการจบ 2 แบบ ยก low ( DOW ) จะเริ่มเข้ามาเก็บของ market maker  จะลากราคาให้พ้น high ของ wave1 แล้ว จะเข้า media attention phase ( ข่าวดีมาทุกวัน )นี่เป็นสาเหตุให้เกิด wave3 ขยาย ( รูปแบบ trending impulse ที่เจอได้มาก )'
+  },
+  {
+    id: 4,
+    name: 'ราคาวิ่งไปถึงจุด peak ของ wave 3',
+    detail:
+      'จะเข้ากระบวนการปรับ wave4 คำถามคือ wave4 ใครขาย? ใครรักษาราคา? 1. ย่อยขายทำกำไร ( panic )  ราคาจะลงแรง และ เร็ว 2. market maker จะเข้ามารักษาราคา ( ไม่ใช่ช่วงเก็บของ แล้ว ) และ ดันราคา ให้เข้าสู่ wave5 คลื่นปรับ 4 จึงมีลักษณะที่ต่างกันออกไป คือ ปรับตื้น กินเวลาน้อย'
+  },
+  {
+    id: 5,
+    name: 'เมื่อลักษณะจิตวิตยาคลื่น 2 และ 4 ต่างกัน ?',
+    detail:
+      'ผู้เข้ามามีบทบาท ในคลื่นนี้ต่างกัน  ใน trending impulse จึงมีกฏการสลับนั่นเอง จะสลับในรูปแบบคลื่นปรับ FLAT ZZ TRI  หรือ สลับกันที่ ระยะเวลา+ราคา ก็ได้ ( ปรับตื้น กินเวลาสั้น - ปรับลึก กินเวลานาน )'
+  },
+  {
+    id: 6,
+    name: 'เมื่อปรับ 4 จบ จะเข้าสู่ Wave 5 ',
+    detail:
+      'ใครขาย ใครซื้อ ใน wave5 จะเป็น climax ของ media attention 2. ย่อยซื้อ ( fomo , to the moon ) ส่วน market maker จะขายทำกำไร ( ใครสนใจเรื่องนี้ สามารถดูเรื่อง wyckoff distribution ประกอบได้ )จบ  trending impules รูปแบบปกติ'
+  }
+]
+
 function Elliottwave () {
   return (
     <div className='bg-black'>
@@ -117,7 +157,7 @@ function Elliottwave () {
                   key={roles.id}
                   className='mx-3 flex max-w-xs flex-col  gap-y-6'
                 >
-                  <dt className='text-base leading-7 text-gray-400 '>
+                  <dt className='text-base leading-7  '>
                     <LinearGradient gradient={['to left', '#60696b ,#858e96']}>
                       {roles.name}
                     </LinearGradient>
@@ -177,9 +217,9 @@ function Elliottwave () {
       </section>
       <section className='trending impules '>
         <div className='mx-auto max-w-7xl text-center py-24 '>
-          <h2 className='text-7xl font-medium tracking-wide  text-center sm:text-6xl '>
+          <h2 className='text-4xl sm:text-5xl md:text-6xl font-medium tracking-wide  text-center  '>
             <LinearGradient gradient={['to left', '#727a9a ,#fff']}>
-              ใน trending impules <br></br>รูปแบบปกติ เราจะเจออะไร
+              ใน Trending Impules <br></br>รูปแบบปกติ เราจะเจออะไร
             </LinearGradient>
           </h2>
           <div className='grid grid-cols-1 gap-x-6 gap-y-10 lg:grid-cols-3 xl:gap-x-8 py-12'>
@@ -190,9 +230,9 @@ function Elliottwave () {
               </div>
             </div>
             <div className='mx-6 col-span-2 text-md leading-8 text-zinc-400 py-12 rounded-3xl bg-gradient-to-r to-70% from-indigo-900'>
-              <div class='mx-3 grid grid-cols-1 md:grid-cols-2 gap-4 items-center'>
-                <div class='text-7xl my-6 text-white'>Wave 2</div>
-                <div class='mx-3 py-2 '>
+              <div className='mx-3 grid grid-cols-1 md:grid-cols-2 gap-4 items-center'>
+                <div className='text-7xl my-6 text-white'>Wave 2</div>
+                <div className='mx-3 py-2 '>
                   รายย่อยยังไม่มั่นใจว่า ตลาดกลับเทรนจริงรึยัง <br></br>(
                   ราคาเพิ่งลงมามาก )จึงมีการขายทำกำไร +
                   คนที่ดอยมาขายทิ้งซึ่งการขายมักจะเริ่มด้วย market maker
@@ -201,15 +241,15 @@ function Elliottwave () {
               </div>
             </div>
             <div className='mx-6 col-span-2 text-md leading-8 text-zinc-400 py-12 rounded-3xl bg-gradient-to-l to-70% from-violet-950'>
-              <div class='mx-3 grid grid-cols-1 md:grid-cols-2 gap-4 items-center'>
-                <div class='mx-3 py-2'>
+              <div className='mx-3 grid grid-cols-1 md:grid-cols-2 gap-4 items-center'>
+                <div className='mx-3 py-2'>
                   ราคาจะลงมาก ( คลื่นปรับ 2 ) ซึ่ง market maker<br></br>
                   จะมีหน้าที่รักษาราคา และ ดูแรงขายตรงนี้ให้ดูที่การ retrace
                   หลับลงมา 50-61.8 ถือว่าดี ถ้าหลุด 78.6-88.6 ลงไป
                   ถือว่าแรงขายมาก แต่ market maker ยังรับอยู่ และจะต้องไม่หลุด
                   low ลงไป
                 </div>
-                <div class='row-span-3 text-7xl my-6 text-white'>Wave 3</div>
+                <div className='row-span-3 text-7xl my-6 text-white'>Wave 3</div>
               </div>
             </div>
             <div className='mx-6 text-md leading-8 text-zinc-400 py-12 rounded-3xl bg-gradient-to-r to-70% from-violet-950 '>
@@ -221,6 +261,30 @@ function Elliottwave () {
           <div className='mx-6 text-md col-span-3 leading-8 text-zinc-400 py-12 rounded-3xl bg-gradient-to-r from-violet-950/10 from-5% via-purple-950 via-50% to-violet-950/10  to-90%'>
             <div className='text-7xl my-6 text-white'>Wave 5</div>
             <div className='mx-3 py-2'>รายย่อยขาย เจ้าเก็บของ</div>
+          </div>
+        </div>
+      </section>
+
+      <section className='more detail'>
+        <div className='mx-auto max-w-7xl'>
+          <div className='py-12 mx-6 space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent'>
+            {moreDetail.map(more => (
+              <div key={more.id} className='relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active'>
+                <div className='flex items-center justify-center w-10 h-10 rounded-full  text-slate-200   shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2'>
+                  <CurrencyDollarIcon className='h-5 w-5' />
+                </div>
+                <div className='w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-zinc-950/40 ring-1 ring-white/10 hover:ring-white/20 hover:shadow-xl hover:shadow-zinc-950 p-4 rounded-3xl '>
+                  <div className='flex items-center justify-between space-x-2 mb-1'>
+                    <div className='font-bold text-xl text-slate-200 my-2'>
+                      {more.name}
+                    </div>
+                  </div>
+                  <div className='text-md text-gray-400'>
+                   {more.detail}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
