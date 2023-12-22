@@ -173,6 +173,30 @@ function Home () {
         </div>
       </div>
     </div>
+
+    ;<Accordion
+  animate={CUSTOM_ANIMATION}
+  key={data.id}
+  open={open === data.id}
+  // icon={<Icon id={data.id} open={open} />}
+  className='rounded-3xl bg-zinc-950/40 ring-1 ring-white/10 hover:ring-white/20 hover:shadow-xl hover:shadow-zinc-950'
+>
+  <AccordionHeader onClick={() => handleOpen(data.id)}>
+    <LinearGradient gradient={['to left', '#8399a2 ,#eef2f3']}>
+      {data.name}
+    </LinearGradient>
+  </AccordionHeader>
+  <AccordionBody>
+    <div className='border-gray-500 py-4'>
+      <img
+        className='h-full w-full object-cover rounded-3xl ring-1 ring-gray-600 '
+        src={data.img}
+      />
+    </div>
+  </AccordionBody>
+</Accordion>
+
   )
 }
+
 export default Home

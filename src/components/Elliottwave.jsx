@@ -249,7 +249,9 @@ function Elliottwave () {
                   ถือว่าแรงขายมาก แต่ market maker ยังรับอยู่ และจะต้องไม่หลุด
                   low ลงไป
                 </div>
-                <div className='row-span-3 text-7xl my-6 text-white'>Wave 3</div>
+                <div className='row-span-3 text-7xl my-6 text-white'>
+                  Wave 3
+                </div>
               </div>
             </div>
             <div className='mx-6 text-md leading-8 text-zinc-400 py-12 rounded-3xl bg-gradient-to-r to-70% from-violet-950 '>
@@ -264,12 +266,14 @@ function Elliottwave () {
           </div>
         </div>
       </section>
-
       <section className='more detail'>
         <div className='mx-auto max-w-7xl'>
           <div className='py-12 mx-6 space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent'>
             {moreDetail.map(more => (
-              <div key={more.id} className='relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active'>
+              <div
+                key={more.id}
+                className='relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active'
+              >
                 <div className='flex items-center justify-center w-10 h-10 rounded-full  text-slate-200   shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2'>
                   <CurrencyDollarIcon className='h-5 w-5' />
                 </div>
@@ -279,9 +283,7 @@ function Elliottwave () {
                       {more.name}
                     </div>
                   </div>
-                  <div className='text-md text-gray-400'>
-                   {more.detail}
-                  </div>
+                  <div className='text-md text-gray-400'>{more.detail}</div>
                 </div>
               </div>
             ))}
