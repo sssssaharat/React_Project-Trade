@@ -48,7 +48,7 @@ function Home () {
   ]
 
   return (
-    <div className='bg-zinc-800/35'>
+    <div className='bg-black'>
       <div className='mx-auto max-w-7xl mt-12'>
         <section className='title'>
           <div className=''>
