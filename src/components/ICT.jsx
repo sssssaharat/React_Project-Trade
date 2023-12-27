@@ -106,7 +106,7 @@ const pricedelivery = [
       'เมื่อราคาพลิกกลับทิศทาง นี่แสดงให้เห็นว่าผู้ดูแลสภาพคล่อง (Market Maker) ได้วิ่งผ่านระดับของการหยุด (Stops) และการ เคลื่อนไหวที่สําคัญควรจะค่อยๆเปลี่ยนไปในทิศทางใหม่',
     focuspoint: 'สิ่งที่เรามองหาในราคาคืออะไร?',
     meaning3:
-      'Liquidity Pools หรือ กลุ่มของสภาพคล่องที่อยู่เหนือ Old High Price (ราคาสูงสุดเก่า) และ ต่ํากว่า Old Low Price (ราคาต่ําสุด เก่า)',
+      'Liquidity Pools หรือ กลุ่มของสภาพคล่องที่อยู่เหนือ Old High Price (ราคาสูงสุดเก่า) และ ต่ำกว่า Old Low Price (ราคาต่ำสุด เก่า)',
     img: 'src/assets/ICT/Reversal.png',
     icon: ServerIcon
   },
