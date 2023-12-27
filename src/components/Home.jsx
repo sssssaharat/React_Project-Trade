@@ -53,11 +53,11 @@ function Home () {
         <section className='title'>
           <div className=''>
             <div className='py-4'>
-              <div className=''>
+              <div className='duration-[1000ms] ease-[cubic-bezier(.47,0,.745,.715)] taos:opacity-0'>
                 <Spline scene='https://prod.spline.design/LGlygYGujQeHBF-7/scene.splinecode' />
               </div>
             </div>
-            <div className='mx-12'>
+            <div className='mx-12 delay-[600ms] duration-[800ms] taos:translate-y-[100%] taos:invisible'data-taos-offset="200">
               <img
                 className='h-full w-full object-cover rounded-xl ring-1 ring-gray-600'
                 src='src/assets/home/Teaser.gif'
@@ -65,22 +65,29 @@ function Home () {
             </div>
           </div>
         </section>
-        <section className='Our Trending Courses'>
-          <div className='mx-auto max-w-7xl py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8'>
-            <h1 className='text-7xl text-center font-bold tracking-tight animate-pulse'>
+        <section className='Our Trending Courses '>
+          <div className='mx-auto max-w-7xl py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 '>
+            <h1
+              className='text-7xl text-center font-bold tracking-tight delay-[500ms] duration-[1000ms] taos:translate-y-[-100%] taos:invisible'
+              data-taos-offset='300'
+            >
               <LinearGradient gradient={['to left', '#727a9a ,#d8dbe9']}>
                 Our Trending Courses
               </LinearGradient>
             </h1>
-            <h2 className='my-4 text-md text-center font-semibold  text-zinc-500'>
+            <h2
+              className='my-4 text-md text-center font-semibold  text-zinc-500 delay-[500ms] duration-[1000ms] taos:translate-y-[-100%] taos:invisible'
+              data-taos-offset='300'
+            >
               Check out most 🔥 courses in the market
             </h2>
             <div className='grid grid-cols-1 gap-x-6 gap-y-10 mx-24 lg:grid-cols-2 '>
               {products.map(pd => (
-                <div key={pd.id} className='group'>
-                  <div className='bg-zinc-800/40  rounded-3xl p-2'>
+                <div key={pd.id} className='group '>
+                  <div className='bg-zinc-800/40  rounded-3xl p-2 '>
                     <img
-                      className='h-full w-full rounded-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300'
+                      className='h-full w-full transition ease-in-out hover:-translate-y-1 hover:scale-110 delay-[300ms] duration-[600ms] taos:translate-y-[200px] taos:opacity-0'
+                      data-taos-offset='300'
                       src={pd.logo}
                     />
                     <h3 className='mt-4 text-xl text-center text-gray-300 font-extrabold'>

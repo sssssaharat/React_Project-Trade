@@ -1,7 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 export default {
- content: ["./src/**/*.{html,js}",],
+ ontent: {
+    relative: true,
+    transform: (content) => content.replace(/taos:/g, ''),
+    files: ['./src/*.{html,js}'],
+  },
  darkMode: 'class',
+ safelist: [
+    '!duration-[0ms]',
+    '!delay-[0ms]',
+    'html.js :where([class*="taos:"]:not(.taos-init))'
+  ],
   theme: {
     screens: {
       'xs': '375px',
@@ -48,6 +57,8 @@ export default {
       }
     }
   },
-  plugins: [],
+ plugins: [
+    require('taos/plugin')
+  ],
 }
 
