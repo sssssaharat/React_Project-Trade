@@ -12,88 +12,88 @@ import Spline from '@splinetool/react-spline'
 const Reversals = [
   {
     id: 1,
-    name: 'Double Bottom',
-    img: 'src/assets/PriceAction/Reversal/DoubleBottom.png'
+    name: "Double Bottom",
+    img: "public/PriceAction/Reversal/DoubleBottom.png",
   },
   {
     id: 2,
-    name: 'Double Top',
-    img: 'src/assets/PriceAction/Reversal/DoubleTop.png'
+    name: "Double Top",
+    img: "public/PriceAction/Reversal/DoubleTop.png",
   },
   {
     id: 3,
-    name: 'Inverted Head and Shoulder',
-    img: 'src/assets/PriceAction/Reversal/InvertedHeadandShoulder.png'
+    name: "Inverted Head and Shoulder",
+    img: "public/PriceAction/Reversal/InvertedHeadandShoulder.png",
   },
   {
     id: 4,
-    name: 'Head and Shoulders',
-    img: 'src/assets/PriceAction/Reversal/HeadandShoulders.png'
+    name: "Head and Shoulders",
+    img: "public/PriceAction/Reversal/HeadandShoulders.png",
   },
   {
     id: 5,
-    name: 'Bullish Cup & handle',
-    img: 'src/assets/PriceAction/Reversal/BullishCup&handle.png'
+    name: "Bullish Cup & handle",
+    img: "public/PriceAction/Reversal/BullishCup&handle.png",
   },
   {
     id: 6,
-    name: 'Bearish Cup & Handle',
-    img: 'src/assets/PriceAction/Reversal/BearishCup&Handle.png'
+    name: "Bearish Cup & Handle",
+    img: "public/PriceAction/Reversal/BearishCup&Handle.png",
   },
   {
     id: 7,
-    name: 'Bullish Daimond',
-    img: 'src/assets/PriceAction/Reversal/BullishDaimond.png'
+    name: "Bullish Daimond",
+    img: "public/PriceAction/Reversal/BullishDaimond.png",
   },
   {
     id: 8,
-    name: 'BearishDaimond',
-    img: 'src/assets/PriceAction/Reversal/BearishDaimond.png'
-  }
-]
+    name: "BearishDaimond",
+    img: "public/PriceAction/Reversal/BearishDaimond.png",
+  },
+];
 
 const Continuation = [
   {
     id: 1,
-    name: 'Bullish Triangle',
-    img: 'src/assets/PriceAction/Continuation/BullishTriangle.png'
+    name: "Bullish Triangle",
+    img: "public/PriceAction/Continuation/BullishTriangle.png",
   },
   {
     id: 2,
-    name: 'Bearish Triangle',
-    img: 'src/assets/PriceAction/Continuation/BearishTriangle.png'
+    name: "Bearish Triangle",
+    img: "public/PriceAction/Continuation/BearishTriangle.png",
   },
   {
     id: 3,
-    name: 'Bullish Wedge',
-    img: 'src/assets/PriceAction/Continuation/BullishWedge.png'
+    name: "Bullish Wedge",
+    img: "public/PriceAction/Continuation/BullishWedge.png",
   },
   {
     id: 4,
-    name: 'Bearish Wedge',
-    img: 'src/assets/PriceAction/Continuation/BearishWedge.png'
+    name: "Bearish Wedge",
+    img: "public/PriceAction/Continuation/BearishWedge.png",
   },
   {
     id: 5,
-    name: 'Bullish Channel',
-    img: 'src/assets/PriceAction/Continuation/BullishChannel.png'
+    name: "Bullish Channel",
+    img: "public/PriceAction/Continuation/BullishChannel.png",
   },
   {
     id: 6,
-    name: 'Bearish Channel',
-    img: 'src/assets/PriceAction/Continuation/BearishChannel.png'
+    name: "Bearish Channel",
+    img: "public/PriceAction/Continuation/BearishChannel.png",
   },
   {
     id: 7,
-    name: 'Bullish Pennant',
-    img: 'src/assets/PriceAction/Continuation/BullishPennant.png'
+    name: "Bullish Pennant",
+    img: "public/PriceAction/Continuation/BullishPennant.png",
   },
   {
     id: 8,
-    name: 'Bearish Pennant',
-    img: 'src/assets/PriceAction/Continuation/BearishPennant.png'
-  }
-]
+    name: "Bearish Pennant",
+    img: "public/PriceAction/Continuation/BearishPennant.png",
+  },
+];
 
 function PriceAction () {
   return (

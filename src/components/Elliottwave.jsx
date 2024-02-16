@@ -20,35 +20,35 @@ import { CurrencyDollarIcon } from '@heroicons/react/24/solid'
 const datas = [
   {
     id: 1,
-    label: 'Irregular Flat',
-    value: 'irregularflat',
-    img: 'src/assets/Elliotwave/rule/IrregularFlat.png'
+    label: "Irregular Flat",
+    value: "irregularflat",
+    img: "public/Elliotwave/rule/IrregularFlat.png",
   },
   {
     id: 2,
-    label: 'Irregular Failure Flat',
-    value: 'irregularfailureflat',
-    img: 'src/assets/Elliotwave/rule/IrregularFlat.png'
+    label: "Irregular Failure Flat",
+    value: "irregularfailureflat",
+    img: "public/Elliotwave/rule/IrregularFlat.png",
   },
   {
     id: 3,
-    label: 'Running Flat',
-    value: 'runningflat',
-    img: 'src/assets/Elliotwave/rule/Running_Flat.png'
+    label: "Running Flat",
+    value: "runningflat",
+    img: "public/Elliotwave/rule/Running_Flat.png",
   },
   {
     id: 4,
-    label: 'Flat Normal B',
-    value: 'flatnormalb',
-    img: 'src/assets/Elliotwave/rule/NormalB.png'
+    label: "Flat Normal B",
+    value: "flatnormalb",
+    img: "public/Elliotwave/rule/NormalB.png",
   },
   {
     id: 5,
-    label: 'Zigzag',
-    value: 'zigzag',
-    img: 'src/assets/Elliotwave/rule/Zigzag.png'
-  }
-]
+    label: "Zigzag",
+    value: "zigzag",
+    img: "public/Elliotwave/rule/Zigzag.png",
+  },
+];
 
 const role = [
   {
@@ -124,46 +124,46 @@ const moreDetail = [
 
 function Elliottwave () {
   return (
-    <div className='bg-black'>
-      <section className='header'>
-        <h1 className='bg-black text-center py-24 text-9xl tracking-tight'>
-          <LinearGradient gradient={['to left', '#deb8f5 ,#5b6cf9']}>
+    <div className="bg-black">
+      <section className="header">
+        <h1 className="bg-black text-center py-24 text-9xl tracking-tight">
+          <LinearGradient gradient={["to left", "#deb8f5 ,#5b6cf9"]}>
             Elliott Wave
           </LinearGradient>
         </h1>
       </section>
-      <section className='structure'>
-        <div className='bg-black'>
-          <div className='mx-auto max-w-7xl px-4 py-12 '>
-            <img src='src/assets/Elliotwave/structure.png' />
+      <section className="structure">
+        <div className="bg-black">
+          <div className="mx-auto max-w-7xl px-4 py-12 ">
+            <img src="public/Elliotwave/structure.png" />
           </div>
         </div>
       </section>
-      <section className='rule'>
-        <div className='bg-black py-24 sm:py-32'>
-          <div className='mx-auto  px-6 lg:px-8'>
-            <div className=' text-center pb-12 text-7xl text-zinc-800 '>
+      <section className="rule">
+        <div className="bg-black py-24 sm:py-32">
+          <div className="mx-auto  px-6 lg:px-8">
+            <div className=" text-center pb-12 text-7xl text-zinc-800 ">
               <LinearGradient
-                className='p-4'
-                gradient={['to left', '#8399a2 ,#eef2f3']}
+                className="p-4"
+                gradient={["to left", "#8399a2 ,#eef2f3"]}
               >
                 กฎ
               </LinearGradient>
               ของคลื่น
             </div>
-            <dl className='grid grid-cols-2 py-12 xl:divide-x divide-zinc-900 gap-y-12  text-center md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 rounded-3xl bg-zinc-950/40 ring-1 ring-white/10 hover:ring-white/20 hover:shadow-xl hover:shadow-zinc-950'>
-              {role.map(roles => (
+            <dl className="grid grid-cols-2 py-12 xl:divide-x divide-zinc-900 gap-y-12  text-center md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 rounded-3xl bg-zinc-950/40 ring-1 ring-white/10 hover:ring-white/20 hover:shadow-xl hover:shadow-zinc-950">
+              {role.map((roles) => (
                 <div
                   key={roles.id}
-                  className='mx-3 flex max-w-xs flex-col  gap-y-6'
+                  className="mx-3 flex max-w-xs flex-col  gap-y-6"
                 >
-                  <dt className='text-base leading-7  '>
-                    <LinearGradient gradient={['to left', '#60696b ,#858e96']}>
+                  <dt className="text-base leading-7  ">
+                    <LinearGradient gradient={["to left", "#60696b ,#858e96"]}>
                       {roles.name}
                     </LinearGradient>
                   </dt>
-                  <dd className='order-first text-3xl flex justify-center font-semibold tracking-tight text-gray-200 sm:text-5xl'>
-                    <roles.icon className='' aria-hidden='true' />
+                  <dd className="order-first text-3xl flex justify-center font-semibold tracking-tight text-gray-200 sm:text-5xl">
+                    <roles.icon className="" aria-hidden="true" />
                   </dd>
                 </div>
               ))}
@@ -171,24 +171,24 @@ function Elliottwave () {
           </div>
         </div>
       </section>
-      <section className='detail'>
-        <div className='bg-black '>
+      <section className="detail">
+        <div className="bg-black ">
           <Tabs
             key={datas}
-            value='Irregular Flat'
-            className='mx-auto max-w-7xl py-12'
+            value="Irregular Flat"
+            className="mx-auto max-w-7xl py-12"
           >
             <TabsHeader
-              className='text-white sm:text-lg mx-4 text-xs bg-transparent bg-zinc-700/25 rounded-3xl flex items-center'
+              className="text-white sm:text-lg mx-4 text-xs bg-transparent bg-zinc-700/25 rounded-3xl flex items-center"
               indicatorProps={{
-                className: 'bg-gray-600/10 shadow-3xl rounded-3xl '
+                className: "bg-gray-600/10 shadow-3xl rounded-3xl ",
               }}
             >
               {datas.map(({ label, value }) => (
                 <Tab
                   key={value}
                   value={value}
-                  className=' py-4 mx-2 my-1 text-md font-semibold  tracking-wide '
+                  className=" py-4 mx-2 my-1 text-md font-semibold  tracking-wide "
                 >
                   {label}
                 </Tab>
@@ -198,14 +198,14 @@ function Elliottwave () {
               animate={{
                 initial: { y: 250 },
                 mount: { y: 0 },
-                unmount: { y: 250 }
+                unmount: { y: 250 },
               }}
             >
               {datas.map(({ value, img }) => (
                 <TabPanel key={value} value={value}>
-                  <div className='border-gray-500 '>
+                  <div className="border-gray-500 ">
                     <img
-                      className='h-full w-full object-cover rounded-3xl ring-1 ring-gray-600'
+                      className="h-full w-full object-cover rounded-3xl ring-1 ring-gray-600"
                       src={img}
                     />
                   </div>
@@ -215,24 +215,24 @@ function Elliottwave () {
           </Tabs>
         </div>
       </section>
-      <section className='trending impules '>
-        <div className='mx-auto max-w-7xl text-center py-24 '>
-          <h2 className='text-4xl sm:text-5xl md:text-6xl font-medium tracking-wide  text-center  '>
-            <LinearGradient gradient={['to left', '#727a9a ,#fff']}>
+      <section className="trending impules ">
+        <div className="mx-auto max-w-7xl text-center py-24 ">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-medium tracking-wide  text-center  ">
+            <LinearGradient gradient={["to left", "#727a9a ,#fff"]}>
               ใน Trending Impules <br></br>รูปแบบปกติ เราจะเจออะไร
             </LinearGradient>
           </h2>
-          <div className='grid grid-cols-1 gap-x-6 gap-y-10 lg:grid-cols-3 xl:gap-x-8 py-12'>
-            <div className='mx-6 text-md leading-8 text-zinc-400 py-12 rounded-3xl bg-gradient-to-l to-70% from-indigo-900 '>
-              <div className='text-7xl my-6 text-white'>Wave 1</div>
-              <div className='mx-3 py-2'>
+          <div className="grid grid-cols-1 gap-x-6 gap-y-10 lg:grid-cols-3 xl:gap-x-8 py-12">
+            <div className="mx-6 text-md leading-8 text-zinc-400 py-12 rounded-3xl bg-gradient-to-l to-70% from-indigo-900 ">
+              <div className="text-7xl my-6 text-white">Wave 1</div>
+              <div className="mx-3 py-2">
                 market maker ทดสอบตลาด ดันราคาขึ้นมาสูง
               </div>
             </div>
-            <div className='mx-6 col-span-2 text-md leading-8 text-zinc-400 py-12 rounded-3xl bg-gradient-to-r to-70% from-indigo-900'>
-              <div className='mx-3 grid grid-cols-1 md:grid-cols-2 gap-4 items-center'>
-                <div className='text-7xl my-6 text-white'>Wave 2</div>
-                <div className='mx-3 py-2 '>
+            <div className="mx-6 col-span-2 text-md leading-8 text-zinc-400 py-12 rounded-3xl bg-gradient-to-r to-70% from-indigo-900">
+              <div className="mx-3 grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+                <div className="text-7xl my-6 text-white">Wave 2</div>
+                <div className="mx-3 py-2 ">
                   รายย่อยยังไม่มั่นใจว่า ตลาดกลับเทรนจริงรึยัง <br></br>(
                   ราคาเพิ่งลงมามาก )จึงมีการขายทำกำไร +
                   คนที่ดอยมาขายทิ้งซึ่งการขายมักจะเริ่มด้วย market maker
@@ -240,50 +240,50 @@ function Elliottwave () {
                 </div>
               </div>
             </div>
-            <div className='mx-6 col-span-2 text-md leading-8 text-zinc-400 py-12 rounded-3xl bg-gradient-to-l to-70% from-violet-950'>
-              <div className='mx-3 grid grid-cols-1 md:grid-cols-2 gap-4 items-center'>
-                <div className='mx-3 py-2'>
+            <div className="mx-6 col-span-2 text-md leading-8 text-zinc-400 py-12 rounded-3xl bg-gradient-to-l to-70% from-violet-950">
+              <div className="mx-3 grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+                <div className="mx-3 py-2">
                   ราคาจะลงมาก ( คลื่นปรับ 2 ) ซึ่ง market maker<br></br>
                   จะมีหน้าที่รักษาราคา และ ดูแรงขายตรงนี้ให้ดูที่การ retrace
                   หลับลงมา 50-61.8 ถือว่าดี ถ้าหลุด 78.6-88.6 ลงไป
                   ถือว่าแรงขายมาก แต่ market maker ยังรับอยู่ และจะต้องไม่หลุด
                   low ลงไป
                 </div>
-                <div className='row-span-3 text-7xl my-6 text-white'>
+                <div className="row-span-3 text-7xl my-6 text-white">
                   Wave 3
                 </div>
               </div>
             </div>
-            <div className='mx-6 text-md leading-8 text-zinc-400 py-12 rounded-3xl bg-gradient-to-r to-70% from-violet-950 '>
-              <div className='text-7xl my-6 text-white'>Wave 4</div>
+            <div className="mx-6 text-md leading-8 text-zinc-400 py-12 rounded-3xl bg-gradient-to-r to-70% from-violet-950 ">
+              <div className="text-7xl my-6 text-white">Wave 4</div>
 
               <div>market maker ทดสอบตลาด ดันราคาขึ้นมาสูง</div>
             </div>
           </div>
-          <div className='mx-6 text-md col-span-3 leading-8 text-zinc-400 py-12 rounded-3xl bg-gradient-to-r from-violet-950/10 from-5% via-purple-950 via-50% to-violet-950/10  to-90%'>
-            <div className='text-7xl my-6 text-white'>Wave 5</div>
-            <div className='mx-3 py-2'>รายย่อยขาย เจ้าเก็บของ</div>
+          <div className="mx-6 text-md col-span-3 leading-8 text-zinc-400 py-12 rounded-3xl bg-gradient-to-r from-violet-950/10 from-5% via-purple-950 via-50% to-violet-950/10  to-90%">
+            <div className="text-7xl my-6 text-white">Wave 5</div>
+            <div className="mx-3 py-2">รายย่อยขาย เจ้าเก็บของ</div>
           </div>
         </div>
       </section>
-      <section className='more detail'>
-        <div className='mx-auto max-w-7xl'>
-          <div className='py-12 mx-6 space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent'>
-            {moreDetail.map(more => (
+      <section className="more detail">
+        <div className="mx-auto max-w-7xl">
+          <div className="py-12 mx-6 space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
+            {moreDetail.map((more) => (
               <div
                 key={more.id}
-                className='relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active'
+                className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active"
               >
-                <div className='flex items-center justify-center w-10 h-10 rounded-full  text-slate-200   shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2'>
-                  <CurrencyDollarIcon className='h-5 w-5' />
+                <div className="flex items-center justify-center w-10 h-10 rounded-full  text-slate-200   shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                  <CurrencyDollarIcon className="h-5 w-5" />
                 </div>
-                <div className='w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-zinc-950/40 ring-1 ring-white/10 hover:ring-white/20 hover:shadow-xl hover:shadow-zinc-950 p-4 rounded-3xl '>
-                  <div className='flex items-center justify-between space-x-2 mb-1'>
-                    <div className='font-bold text-xl text-slate-200 my-2'>
+                <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-zinc-950/40 ring-1 ring-white/10 hover:ring-white/20 hover:shadow-xl hover:shadow-zinc-950 p-4 rounded-3xl ">
+                  <div className="flex items-center justify-between space-x-2 mb-1">
+                    <div className="font-bold text-xl text-slate-200 my-2">
                       {more.name}
                     </div>
                   </div>
-                  <div className='text-md text-gray-400'>{more.detail}</div>
+                  <div className="text-md text-gray-400">{more.detail}</div>
                 </div>
               </div>
             ))}
@@ -291,7 +291,7 @@ function Elliottwave () {
         </div>
       </section>
     </div>
-  )
+  );
 }
 
 export default Elliottwave

@@ -8,35 +8,35 @@ import {
 const datas = [
   {
     id: 1,
-    name: 'The Gartley',
-    img: 'src/assets/HarmonicPattern/Gartley.png'
+    name: "The Gartley",
+    img: "public/HarmonicPattern/Gartley.png",
   },
   {
     id: 2,
-    name: 'The Bat',
-    img: 'src/assets/HarmonicPattern/Bat.png'
+    name: "The Bat",
+    img: "public/HarmonicPattern/Bat.png",
   },
   {
     id: 3,
-    name: 'The Butterfly',
-    img: 'src/assets/HarmonicPattern/Butterfly.png'
+    name: "The Butterfly",
+    img: "public/HarmonicPattern/Butterfly.png",
   },
   {
     id: 4,
-    name: 'The Crab',
-    img: 'src/assets/HarmonicPattern/Crab.png'
+    name: "The Crab",
+    img: "public/HarmonicPattern/Crab.png",
   },
   {
     id: 5,
-    name: 'C Point',
-    img: 'src/assets/HarmonicPattern/CPoint.png'
+    name: "C Point",
+    img: "public/HarmonicPattern/CPoint.png",
   },
   {
     id: 6,
-    name: 'D Point',
-    img: 'src/assets/HarmonicPattern/DPoint.png'
-  }
-]
+    name: "D Point",
+    img: "public/HarmonicPattern/DPoint.png",
+  },
+];
 
 function Harmonicpattern () {
   const [open, setOpen] = React.useState(0)
