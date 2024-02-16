@@ -1,12 +1,13 @@
-import React from 'react'
-import { LinearGradient } from 'react-text-gradients'
-import Spline from '@splinetool/react-spline'
-import { Link } from 'react-router-dom'
-import {
-  Button
-} from '@material-tailwind/react'
+import React from "react";
+import { LinearGradient } from "react-text-gradients";
+import Spline from "@splinetool/react-spline";
+import { Link } from "react-router-dom";
+import { Button } from "@material-tailwind/react";
+import { useState } from "react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Dialog } from "@headlessui/react";
 
-function Home () {
+function Home() {
   const products = [
     {
       id: 1,
@@ -41,21 +42,95 @@ function Home () {
       sub: 'สิ่งที่ราคาได้กระทำเป็นการพยายามแปลความหมายและตีความสถานการณ์ของตลาดทางการเงิน ผ่านการพิจารณารูปแบบราคา หรือ "Pattern" ที่สามารถมองเห็นได้ด้วยตาเปล่าผ่านกราฟราคา จึงมักนิยมเรียกลักษณะการวิเคราะห์ดังกล่าวว่า "วิเคราะห์กราฟเปล่า"',
     },
   ];
-
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const navigation = [
+    { id: 1, name: "ICT", action: "/ict" },
+    { id: 2, name: "Elliott Wave", action: "/elliottwave" },
+    { id: 3, name: "Harmonic Pattern", action: "/harmonicpattern" },
+    { id: 4, name: "PriceAction", action: "/priceaction" },
+  ];
   return (
     <div className="bg-black">
       <div className="mx-auto max-w-7xl mt-12">
-        <section className="title">
-          <div className="">
-            <div className="py-4">
-              <div className="duration-[1000ms] ease-[cubic-bezier(.47,0,.745,.715)] taos:opacity-0">
-                <Spline scene="https://prod.spline.design/LGlygYGujQeHBF-7/scene.splinecode" />
-              </div>
-            </div>
-            <div
-              className="mx-12 delay-[600ms] duration-[800ms] taos:translate-y-[100%] taos:invisible"
-              data-taos-offset="200"
+        <section className="nav">
+          <div className="absolute inset-x-0 top-0 z-50">
+            <nav
+              className="flex items-center justify-center p-2 lg:px-8 bg-zinc-950 "
+              aria-label="Global"
             >
+              <div className="hidden lg:flex lg:gap-x-12 items-center justify-center">
+                {navigation.map((item) => (
+                  <Link
+                    key={item.id}
+                    to={item.action}
+                    // variant='text'
+                    // color='while'
+                  >
+                    <Button
+                      variant="text"
+                      className="rounded-full text-neutral-500 hover:text-gray-100 "
+                    >
+                      {item.name}
+                    </Button>
+                  </Link>
+                ))}
+              </div>
+            </nav>
+            <div className="flex lg:hidden items-start justify-start lg:px-8 bg-zinc-950 p-2">
+              <button
+                type="button"
+                className="mx-2 inline-flex  rounded-md  text-gray-400 hover:text-gray-100"
+                onClick={() => setMobileMenuOpen(true)}
+              >
+                <span className="sr-only">Open main menu</span>
+                <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+              </button>
+            </div>
+            <Dialog
+              as="div"
+              className="lg:hidden "
+              open={mobileMenuOpen}
+              onClose={setMobileMenuOpen}
+            >
+              <div className="fixed inset-0 z-50" />
+              <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-zinc-950 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                <div className="flex items-center justify-end">
+                  <button
+                    type="button"
+                    className="-m-2.5 rounded-full p-2.5 text-gray-400 hover:bg-zinc-900"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    <span className="sr-only">Close menu</span>
+                    <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                  </button>
+                </div>
+                <div className="mt-6 flow-root">
+                  <div className="-my-6 divide-y divide-gray-500/10">
+                    <div className="space-y-2 py-6">
+                      {navigation.map((item) => (
+                        <Link key={item.id} to={item.action}>
+                          <Button
+                            fullWidth
+                            variant="text"
+                            className="rounded-lg p-6 text-start text-neutral-500 hover:bg-zinc-900"
+                          >
+                            {item.name}
+                          </Button>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </Dialog.Panel>
+            </Dialog>
+          </div>
+        </section>
+        <section className="title">
+          <div className="mx-auto max-w-7xl">
+            <div className="py-4">
+              <Spline scene="https://prod.spline.design/LGlygYGujQeHBF-7/scene.splinecode" />
+            </div>
+            <div className="mx-12">
               <img
                 className="h-full w-full object-cover rounded-xl ring-1 ring-gray-600"
                 src="home/Teaser.gif"
@@ -66,7 +141,7 @@ function Home () {
         <section className="Our Trending Courses ">
           <div className="mx-auto max-w-7xl py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 ">
             <h1
-              className="text-7xl text-center font-bold tracking-tight delay-[500ms] duration-[1000ms] taos:translate-y-[-100%] taos:invisible"
+              className="text-7xl text-center font-bold tracking-tight "
               data-taos-offset="300"
             >
               <LinearGradient gradient={["to left", "#727a9a ,#d8dbe9"]}>
@@ -74,32 +149,32 @@ function Home () {
               </LinearGradient>
             </h1>
             <h2
-              className="my-4 text-md text-center font-semibold  text-zinc-500 delay-[500ms] duration-[1000ms] taos:translate-y-[-100%] taos:invisible"
+              className="my-4 text-md text-center font-semibold  text-zinc-500 "
               data-taos-offset="300"
             >
               Check out most 🔥 courses in the market
             </h2>
-            <div className="grid grid-cols-1 gap-x-6 gap-y-10 mx-24 lg:grid-cols-2 ">
+            <div className="grid grid-cols-1 gap-x-6 gap-y-10 mx-12 lg:grid-cols-2 ">
               {products.map((pd) => (
                 <div key={pd.id} className="group ">
                   <div className="bg-zinc-800/40  rounded-3xl p-2 ">
                     <img
-                      className="h-full w-full transition ease-in-out hover:-translate-y-1 hover:scale-110 delay-[300ms] duration-[600ms] taos:translate-y-[200px] taos:opacity-0"
+                      className="h-full w-full transition ease-in-out hover:-translate-y-1 hover:scale-110 "
                       data-taos-offset="300"
                       src={pd.logo}
                     />
                     <h3 className="mt-4 text-xl text-center text-gray-300 font-extrabold">
                       {pd.name}
                     </h3>
-                    <div className="text-neutral-600 p-6 indent-8">
+                    <div className="text-neutral-500 p-6 indent-8">
                       {pd.sub}
                     </div>
                     <Link
                       to={pd.action}
                       className="flex justify-center items-center gap-2"
                     >
-                      <Button className="text-neutral-600 bg-zinc-800/35 rounded-full ring-1 ring-white/10 hover:text-gray-400 mb-4">
-                        Learn more
+                      <Button className="text-neutral-400 bg-zinc-800/35 rounded-full ring-1 ring-white/10 hover:text-gray-300 mb-4">
+                        เพิ่มเติม
                       </Button>
                     </Link>
                   </div>
@@ -113,4 +188,4 @@ function Home () {
   );
 }
 
-export default Home
+export default Home;

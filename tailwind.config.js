@@ -1,10 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 export default {
- ontent: {
-    relative: true,
-    transform: (content) => content.replace(/taos:/g, ''),
-    files: ['./src/*.{html,js}'],
-  },
+ content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
  darkMode: 'class',
  safelist: [
     '!duration-[0ms]',

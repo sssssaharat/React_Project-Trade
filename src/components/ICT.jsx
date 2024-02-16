@@ -1,5 +1,5 @@
-import React from 'react'
-import { LinearGradient } from 'react-text-gradients'
+import React from "react";
+import { LinearGradient } from "react-text-gradients";
 import {
   TbRosetteNumber1,
   TbRosetteNumber2,
@@ -8,65 +8,71 @@ import {
   TbRosetteNumber5,
   TbRosetteNumber6,
   TbRosetteNumber7,
-  TbRosetteNumber8
-} from 'react-icons/tb'
+  TbRosetteNumber8,
+} from "react-icons/tb";
 import {
   CheckIcon,
   CloudArrowUpIcon,
   LockClosedIcon,
-  ServerIcon
-} from '@heroicons/react/20/solid'
-import { Carousel } from '@material-tailwind/react'
-import { motion } from 'framer-motion'
+  ServerIcon,
+} from "@heroicons/react/20/solid";
+import { Carousel } from "@material-tailwind/react";
+import { motion } from "framer-motion";
 const IOF = [
-  'Expansion (การแจกจ่าย)',
-  'Retracement (การย่อตัว)',
-  'Reversal (การกลับตัว)',
-  'Consolidation (การสะสมราคา)'
-]
+  "Expansion (การแจกจ่าย)",
+  "Retracement (การย่อตัว)",
+  "Reversal (การกลับตัว)",
+  "Consolidation (การสะสมราคา)",
+];
 
 const zillzone = [
   {
-    name: 'Midnight',
-    time: '00:00',
-    icon: TbRosetteNumber1
+    id: 1,
+    name: "Midnight",
+    time: "00:00",
+    icon: TbRosetteNumber1,
+  },
+  { id: 2, 
+    name: "London Open", 
+    time: "02:00 - 05:00", 
+    icon: TbRosetteNumber2 },
+  {
+    id: 3,
+    name: "London Lunch",
+    time: "05:00 - 07:00",
+    icon: TbRosetteNumber3,
   },
   {
-    name: 'London Open',
-    time: '02:00 - 05:00',
-    icon: TbRosetteNumber2
+    id: 4,
+    name: "New York Open",
+    time: "07:00 - 10:00",
+    icon: TbRosetteNumber4,
   },
   {
-    name: 'London Lunch',
-    time: '05:00 - 07:00',
-    icon: TbRosetteNumber3
+    id: 5,
+    name: "London Close",
+    time: "10:00 - 12:00",
+    icon: TbRosetteNumber5,
   },
   {
-    name: 'New York Open',
-    time: '07:00 - 10:00',
-    icon: TbRosetteNumber4
+    id: 6,
+    name: "CBDR",
+    time: "14:00 - 20:00",
+    icon: TbRosetteNumber6,
   },
   {
-    name: 'London Close',
-    time: '10:00 - 12:00',
-    icon: TbRosetteNumber5
+    id: 7,
+    name: "Asian Range",
+    time: "20:00 - 00:00",
+    icon: TbRosetteNumber7,
   },
   {
-    name: 'CBDR',
-    time: '14:00 - 20:00',
-    icon: TbRosetteNumber6
+    id: 8,
+    name: "CME Opening",
+    time: "08:20",
+    icon: TbRosetteNumber8,
   },
-  {
-    name: 'Asian Range',
-    time: '20:00 - 00:00',
-    icon: TbRosetteNumber7
-  },
-  {
-    name: 'CME Opening',
-    time: '08:20',
-    icon: TbRosetteNumber8
-  }
-]
+];
 
 const pricedelivery = [
   {
@@ -156,187 +162,187 @@ const BounceCard = ({ className, children }) => {
     <motion.div
       whileHover={{
         scale: 1.1,
-        transition: { duration: 0.7 }
+        transition: { duration: 0.7 },
       }}
       className={`group relative min-h-[300px] cursor-pointer overflow-hidden rounded-3xl p-1 bg-zinc-700/25 hover:ring-1 hover:ring-zinc-800 hover:shadow-xl hover:shadow-gray-950 ${className}`}
     >
       {children}
     </motion.div>
-  )
-}
+  );
+};
 
 const CardTitle = ({ children }) => {
   return (
-    <h3 className='mx-auto mt-4 text-center  sm:text-md text-3xl font-semibold'>
+    <h3 className="mx-auto mt-4 text-center  sm:text-md text-3xl font-semibold">
       {children}
     </h3>
-  )
-}
+  );
+};
 
 const TerminologyAbbreviations = [
   {
     id: 1,
-    name: 'BSL',
-    fullname: 'buyside liquidity'
+    name: "BSL",
+    fullname: "buyside liquidity",
   },
   {
     id: 2,
-    name: 'SSL',
-    fullname: 'sellside liquidity'
+    name: "SSL",
+    fullname: "sellside liquidity",
   },
   {
     id: 3,
-    name: 'EQH',
-    fullname: 'equal highs'
+    name: "EQH",
+    fullname: "equal highs",
   },
   {
     id: 4,
-    name: 'EQL',
-    fullname: 'equal lows'
+    name: "EQL",
+    fullname: "equal lows",
   },
   {
     id: 5,
-    name: 'PDH',
-    fullname: 'previous day high'
+    name: "PDH",
+    fullname: "previous day high",
   },
   {
     id: 6,
-    name: 'PDL',
-    fullname: 'previous day low'
+    name: "PDL",
+    fullname: "previous day low",
   },
   {
     id: 7,
-    name: 'HTF',
-    fullname: 'high timeframe'
+    name: "HTF",
+    fullname: "high timeframe",
   },
   {
     id: 8,
-    name: 'LTF',
-    fullname: 'low timeframe'
+    name: "LTF",
+    fullname: "low timeframe",
   },
   {
     id: 9,
-    name: 'MSB',
-    fullname: 'market structure break'
+    name: "MSB",
+    fullname: "market structure break",
   },
   {
     id: 10,
-    name: 'STH',
-    fullname: 'short term high'
+    name: "STH",
+    fullname: "short term high",
   },
   {
     id: 11,
-    name: 'STL',
-    fullname: 'short term low'
+    name: "STL",
+    fullname: "short term low",
   },
   {
     id: 12,
-    name: 'ITH',
-    fullname: 'intermediate term high'
+    name: "ITH",
+    fullname: "intermediate term high",
   },
   {
     id: 13,
-    name: 'ITL',
-    fullname: 'intermediate term low'
+    name: "ITL",
+    fullname: "intermediate term low",
   },
   {
     id: 14,
-    name: 'LTH',
-    fullname: 'long term high'
+    name: "LTH",
+    fullname: "long term high",
   },
   {
     id: 15,
-    name: 'LTL',
-    fullname: 'long term low'
+    name: "LTL",
+    fullname: "long term low",
   },
   {
     id: 16,
-    name: 'IDM',
-    fullname: 'inducement'
+    name: "IDM",
+    fullname: "inducement",
   },
   {
     id: 17,
-    name: 'FVG',
-    fullname: 'fair value gap'
+    name: "FVG",
+    fullname: "fair value gap",
   },
   {
     id: 18,
-    name: 'OB',
-    fullname: 'order block'
+    name: "OB",
+    fullname: "order block",
   },
   {
     id: 19,
-    name: 'BB',
-    fullname: 'breaker block'
+    name: "BB",
+    fullname: "breaker block",
   },
   {
     id: 20,
-    name: 'SMT',
-    fullname: 'smart money technique'
+    name: "SMT",
+    fullname: "smart money technique",
   },
   {
     id: 21,
-    name: 'OTE',
-    fullname: 'optimal trade entry'
+    name: "OTE",
+    fullname: "optimal trade entry",
   },
   {
     id: 22,
-    name: 'PD',
-    fullname: 'premium discount'
+    name: "PD",
+    fullname: "premium discount",
   },
   {
     id: 23,
-    name: 'BISI',
-    fullname: 'buyside imbalance sellside inefficiency'
+    name: "BISI",
+    fullname: "buyside imbalance sellside inefficiency",
   },
   {
     id: 24,
-    name: 'SIBI',
-    fullname: 'sellside imbalance buyside inefficiency'
+    name: "SIBI",
+    fullname: "sellside imbalance buyside inefficiency",
   },
   {
     id: 25,
-    name: 'MMBM',
-    fullname: 'market maker buy model'
+    name: "MMBM",
+    fullname: "market maker buy model",
   },
   {
     id: 26,
-    name: 'MMSM',
-    fullname: 'market maker sell model'
+    name: "MMSM",
+    fullname: "market maker sell model",
   },
   {
     id: 27,
-    name: 'IOF',
-    fullname: 'institutional order flow'
+    name: "IOF",
+    fullname: "institutional order flow",
   },
   {
     id: 28,
-    name: 'DOL',
-    fullname: 'draw on liquidity'
+    name: "DOL",
+    fullname: "draw on liquidity",
   },
   {
     id: 29,
-    name: 'POI',
-    fullname: 'point of interest'
+    name: "POI",
+    fullname: "point of interest",
   },
   {
     id: 30,
-    name: 'CE',
-    fullname: 'consequent encroachment'
+    name: "CE",
+    fullname: "consequent encroachment",
   },
   {
     id: 31,
-    name: 'PO3',
-    fullname: 'power of three'
+    name: "PO3",
+    fullname: "power of three",
   },
   {
     id: 32,
-    name: 'KZ',
-    fullname: 'killzone'
-  }
-]
+    name: "KZ",
+    fullname: "killzone",
+  },
+];
 
-function ICT () {
+function ICT() {
   return (
     <div className="bg-black">
       <section
@@ -406,7 +412,7 @@ function ICT () {
             <dl className="grid max-w-7xl grid-cols-2 gap-y-10 gap-x-1 mx-3 sm:mx-20 md:grid-cols-3 lg:max-w-none lg:grid-cols-4 lg:gap-y-10 ">
               {zillzone.map((feature) => (
                 <div
-                  key={feature.name}
+                  key={feature.id}
                   className="relative grid sm:justify-items-center"
                 >
                   <dt className="text-base font-semibold leading-7 text-gray-900">
@@ -518,7 +524,7 @@ function ICT () {
           </div>
           {pricedelivery.map((post) =>
             post.id % 2 === 0 ? (
-              <div key={post} className="mb-24 grid grid-cols-12 gap-8">
+              <div key={post.id} className="mb-24 grid grid-cols-12 gap-8">
                 <BounceCard className="col-span-12 md:col-span-4">
                   <CardTitle>
                     <LinearGradient gradient={["to left", "#727a9a ,#d8dbe9"]}>
@@ -551,14 +557,14 @@ function ICT () {
             ) : (
               <div className="mb-24 grid grid-cols-12 gap-8">
                 <div className="col-span-12 md:col-span-8">
-                  <img
+                  <img 
                     className="rounded-3xl p-1 h-full w-full object-cover item-center"
                     src={post.img}
                   />
                 </div>
 
                 <BounceCard className="col-span-12 md:col-span-4">
-                  <CardTitle>
+                  <CardTitle >
                     <LinearGradient gradient={["to left", "#727a9a ,#d8dbe9"]}>
                       {post.title}
                     </LinearGradient>
@@ -605,7 +611,7 @@ function ICT () {
           >
             {liquidity.map((lq) => (
               <img
-                key={lq}
+                key={lq.id}
                 className="h-full w-full object-cover"
                 src={lq.img}
               />
@@ -771,4 +777,4 @@ function ICT () {
   );
 }
 
-export default ICT
+export default ICT;

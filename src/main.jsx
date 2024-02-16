@@ -9,15 +9,12 @@ import ICT from './components/ICT.jsx'
 import Elliottwave from './components/Elliottwave.jsx'
 import Harmonicpattern from './components/Harmonicpattern.jsx'
 import PriceAction from './components/Priceaction.jsx'
-import Nav from './components/Nav.jsx'
+
 const router = createBrowserRouter([
+  
   {
     path: '/',
-    element: <Nav />
-  },
-  {
-    path: '/home',
-    element: <Home/>
+    element: <Home />
   },
   {
     path: '/ict',

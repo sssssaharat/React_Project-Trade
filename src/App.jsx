@@ -1,14 +1,11 @@
-import Home from './components/Home'
+import Home from "./components/Home";
 
-import Nav from './components/Nav'
-
-function App () {
+function App() {
   return (
     <>
-      <Nav />
       <Home />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
