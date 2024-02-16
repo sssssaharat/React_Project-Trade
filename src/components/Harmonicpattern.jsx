@@ -9,32 +9,32 @@ const datas = [
   {
     id: 1,
     name: "The Gartley",
-    img: "public/HarmonicPattern/Gartley.png",
+    img: "HarmonicPattern/Gartley.png",
   },
   {
     id: 2,
     name: "The Bat",
-    img: "public/HarmonicPattern/Bat.png",
+    img: "HarmonicPattern/Bat.png",
   },
   {
     id: 3,
     name: "The Butterfly",
-    img: "public/HarmonicPattern/Butterfly.png",
+    img: "HarmonicPattern/Butterfly.png",
   },
   {
     id: 4,
     name: "The Crab",
-    img: "public/HarmonicPattern/Crab.png",
+    img: "HarmonicPattern/Crab.png",
   },
   {
     id: 5,
     name: "C Point",
-    img: "public/HarmonicPattern/CPoint.png",
+    img: "HarmonicPattern/CPoint.png",
   },
   {
     id: 6,
     name: "D Point",
-    img: "public/HarmonicPattern/DPoint.png",
+    img: "HarmonicPattern/DPoint.png",
   },
 ];
 

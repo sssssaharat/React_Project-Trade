@@ -12,7 +12,7 @@ function Home () {
       id: 1,
       name: "ICT",
       action: "/ict",
-      logo: "public/home/ICT.png",
+      logo: "home/ICT.png",
       aptitude: "⭐️⭐️⭐️⭐️⭐️",
       sub: "ICT หรือ ชื่อเต็มคือ Inner Circle Trader เป็นแนวคิดการเทรดที่เผยแพร่ความคิดเกี่ยวกับ Smart Money Concept หรือ SMC ซึ่งเป็นที่รู้จักในบรรดาเทรดเดอร์ในประเทศไทยอย่างกว้างขวาง มีการนำแนวคิดไปใช้จำนวนมาก",
     },
@@ -20,7 +20,7 @@ function Home () {
       id: 2,
       name: "Elliott Wave",
       action: "/elliottwave",
-      logo: "public/home/EW.png",
+      logo: "home/EW.png",
       aptitude: "⭐️⭐️⭐️⭐️",
       sub: "ทฤษฎีที่อธิบายถึงการขึ้นลงของราคาสินทรัพย์ ที่เกิดขึ้นจากพฤติกรรมการซื้อขายของคนหมู่มากที่มีทั้งอารมณ์และหลักการทางจิตวิทยาเข้ามาเกี่ยวข้องกับการตัดสินใจของนักลงทุนในตลาด จนได้กราฟที่มีลักษณะเป็นคลื่นประกอบกันเป็นวัฏจักรของราคา",
     },
@@ -28,7 +28,7 @@ function Home () {
       id: 3,
       name: "Harmonic Pattern",
       action: "/harmonicpattern",
-      logo: "public/home/HMN.png",
+      logo: "home/HMN.png",
       aptitude: "⭐️⭐️",
       sub: "เป็นหนึ่งในรูปแบบกราฟเทรดที่มีความซับซ้อนเพิ่มมากขึ้น โดยอาศัยระดับ Fibonacci และพฤติกรรมราคาที่มีความเชื่อมโยงรูปแบบเรขาคณิตเข้ามาเกี่ยวข้อง เราเรียกรูปแบบนี้ว่า harmonic pattern ตามชื่อของ Harold McKinley Gartley ผู้ที่คิดค้นทฤษฎีขึ้นมาครั้งแรก",
     },
@@ -36,7 +36,7 @@ function Home () {
       id: 4,
       name: "PriceAction",
       action: "/priceaction",
-      logo: "public/home/PA.png",
+      logo: "home/PA.png",
       aptitude: "⭐️⭐️",
       sub: 'สิ่งที่ราคาได้กระทำเป็นการพยายามแปลความหมายและตีความสถานการณ์ของตลาดทางการเงิน ผ่านการพิจารณารูปแบบราคา หรือ "Pattern" ที่สามารถมองเห็นได้ด้วยตาเปล่าผ่านกราฟราคา จึงมักนิยมเรียกลักษณะการวิเคราะห์ดังกล่าวว่า "วิเคราะห์กราฟเปล่า"',
     },
@@ -58,7 +58,7 @@ function Home () {
             >
               <img
                 className="h-full w-full object-cover rounded-xl ring-1 ring-gray-600"
-                src="public/home/Teaser.gif"
+                src="home/Teaser.gif"
               />
             </div>
           </div>

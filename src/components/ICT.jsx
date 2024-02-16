@@ -80,7 +80,7 @@ const pricedelivery = [
     focuspoint: "สิ่งที่เรามองหาในราคาคืออะไร?",
     meaning3:
       "Orderblocks หรือ บล็อกคําสั่ง ที่ Market Maker เคลื่อนที่ออก จากจุดสมดุล หรือ ใกล้เคียงจุดสมดุล",
-    img: "public/ICT/Expansion.png",
+    img: "ICT/Expansion.png",
     icon: CloudArrowUpIcon,
   },
   {
@@ -93,7 +93,7 @@ const pricedelivery = [
       "เมื่อราคากลับมาภายในช่วงราคาล่าสุด นี่แสดงให้เห็นถึงความ เต็มใจของผู้ดูแลสภาพคล่อง (Market Maker) ในการปรับราคาใหม่ (Rebalance) ในระดับที่ไม่ได้ซื้อขายกัน อย่างมีประสิทธิภาพ สําหรับมูลค่าที่ยุติธรรม (Fair Value)",
     focuspoint: "สิ่งที่เรามองหาในราคาคืออะไร?",
     meaning3: "Fair Value Gaps (FVG) และ Liquidity Voids (LV)",
-    img: "public/ICT/Retracement.png",
+    img: "ICT/Retracement.png",
     icon: LockClosedIcon,
   },
   {
@@ -107,7 +107,7 @@ const pricedelivery = [
     focuspoint: "สิ่งที่เรามองหาในราคาคืออะไร?",
     meaning3:
       "Liquidity Pools หรือ กลุ่มของสภาพคล่องที่อยู่เหนือ Old High Price (ราคาสูงสุดเก่า) และ ต่ำกว่า Old Low Price (ราคาต่ำสุด เก่า)",
-    img: "public/ICT/Reversal.png",
+    img: "ICT/Reversal.png",
     icon: ServerIcon,
   },
   {
@@ -121,34 +121,34 @@ const pricedelivery = [
     focuspoint: "สิ่งที่เรามองหาในราคาคืออะไร?",
     meaning3:
       "Impulse Price Swing ของราคาออกจากระดับราคาสมดุล ซึ่ง พบได้ในช่วงกึ่งกลางของการเกิด Consolidation",
-    img: "public/ICT/Consolidation.png",
+    img: "ICT/Consolidation.png",
     icon: ServerIcon,
   },
 ];
 const liquidity = [
   {
     id: 1,
-    img: "public/ICT/OldLow_OldHigh.png",
+    img: "ICT/OldLow_OldHigh.png",
   },
   {
     id: 2,
-    img: "public/ICT/RelativeEqualLows:High.png",
+    img: "ICT/RelativeEqualLows:High.png",
   },
   {
     id: 3,
-    img: "public/ICT/Demand:Suppy.png",
+    img: "ICT/Demand:Suppy.png",
   },
   {
     id: 4,
-    img: "public/ICT/Trendline Liquidity.png",
+    img: "ICT/Trendline Liquidity.png",
   },
   {
     id: 5,
-    img: "public/ICT/Session High:Low.png",
+    img: "ICT/Session High:Low.png",
   },
   {
     id: 6,
-    img: "public/ICT/Swing Structure .png",
+    img: "ICT/Swing Structure .png",
   },
 ];
 const BounceCard = ({ className, children }) => {
@@ -368,7 +368,7 @@ function ICT () {
             <div className="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0 grid justify-items-center">
               <img
                 className="rounded-md w-full h-72 object-cover "
-                src="public/ICT/ICT.jpeg"
+                src="ICT/ICT.jpeg"
               />
             </div>
             <div className="p-8 sm:p-10 lg:flex-auto ">
@@ -497,7 +497,7 @@ function ICT () {
               <div className="-mt-2 p-2 lg:mt-0  lg:w-full lg:max-w-md lg:flex-shrink-0">
                 <img
                   className="rounded-2xl h-full w-full object-cover item-center"
-                  src="public/ICT/Interblank.avif"
+                  src="ICT/Interblank.avif"
                 />
               </div>
             </div>
@@ -691,7 +691,7 @@ function ICT () {
             </div>
           </div>
           <div>
-            <img src="public/ICT/NewProject.png" />
+            <img src="ICT/NewProject.png" />
           </div>
         </div>
       </section>

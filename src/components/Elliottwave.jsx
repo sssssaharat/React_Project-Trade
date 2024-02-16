@@ -22,31 +22,31 @@ const datas = [
     id: 1,
     label: "Irregular Flat",
     value: "irregularflat",
-    img: "public/Elliotwave/rule/IrregularFlat.png",
+    img: "Elliotwave/rule/IrregularFlat.png",
   },
   {
     id: 2,
     label: "Irregular Failure Flat",
     value: "irregularfailureflat",
-    img: "public/Elliotwave/rule/IrregularFlat.png",
+    img: "Elliotwave/rule/IrregularFlat.png",
   },
   {
     id: 3,
     label: "Running Flat",
     value: "runningflat",
-    img: "public/Elliotwave/rule/Running_Flat.png",
+    img: "Elliotwave/rule/Running_Flat.png",
   },
   {
     id: 4,
     label: "Flat Normal B",
     value: "flatnormalb",
-    img: "public/Elliotwave/rule/NormalB.png",
+    img: "Elliotwave/rule/NormalB.png",
   },
   {
     id: 5,
     label: "Zigzag",
     value: "zigzag",
-    img: "public/Elliotwave/rule/Zigzag.png",
+    img: "Elliotwave/rule/Zigzag.png",
   },
 ];
 
@@ -135,7 +135,7 @@ function Elliottwave () {
       <section className="structure">
         <div className="bg-black">
           <div className="mx-auto max-w-7xl px-4 py-12 ">
-            <img src="public/Elliotwave/structure.png" />
+            <img src="Elliotwave/structure.png" />
           </div>
         </div>
       </section>
